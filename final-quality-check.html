@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Quality Check | Patil Construction & Interior</title>
+    <meta name="description" content="Comprehensive pre-handover inspection ensuring everything works perfectly.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .standard-hero {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .standard-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .standard-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .standard-content {
+            padding: 80px 0;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #27ae60;
+            padding-left: 1rem;
+        }
+
+        .content-section p {
+            color: #333;
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid #27ae60;
+        }
+
+        .highlight-box h4 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .standard-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .standard-features li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--text-dark);
+            border-bottom: 1px solid #eee;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .standard-features li:last-child {
+            border-bottom: none;
+        }
+
+        .standard-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .checklist-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #27ae60;
+        }
+
+        .checklist-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checklist-card ul {
+            padding-left: 1.5rem;
+        }
+
+        .checklist-card li {
+            margin-bottom: 0.6rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .process-flow {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .process-item {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .process-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-item h5 {
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .process-item p {
+            color: #666;
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .standard-cta {
+            background: var(--primary);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .standard-hero h1 {
+                font-size: 2rem;
+            }
+
+            .checklist-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-flow {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper"><span class="logo-text">Patil</span><span
+                        class="logo-accent">Construction</span><span class="logo-subtext">& Interior</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+    </nav>
+
+    <section class="standard-hero">
+        <div class="container">
+            <a href="quality.html" class="back-link">← Back to Quality Standards</a>
+            <h1>✅ Final Quality Check</h1>
+            <p>A comprehensive pre-handover inspection ensures everything works perfectly before you receive the keys to
+                your new home or building.</p>
+        </div>
+    </section>
+
+    <section class="standard-content">
+        <div class="container">
+            <div class="content-section">
+                <h2>The Last Mile of Quality</h2>
+                <p>The final quality check is the culmination of all our quality control efforts. Before we hand over
+                    your completed project, our team conducts a thorough inspection covering every aspect of the
+                    construction — from structural integrity to finishing details, from electrical systems to plumbing
+                    fixtures. Nothing is left to chance.</p>
+
+                <p>This comprehensive walkthrough is conducted by a senior quality team that includes our project
+                    manager, site supervisor, and quality engineer. They examine the project with fresh eyes, as if
+                    seeing it for the first time, identifying any issues that might have been missed during the
+                    construction phase. Every deficiency is documented, rectified, and re-inspected before handover.</p>
+
+                <p>We believe that you should receive a project that is 100% complete and defect-free. No punch list
+                    items left for later, no "we'll fix it after you move in" promises. When you receive the keys, your
+                    home should be ready to live in immediately, exactly as you envisioned it.</p>
+            </div>
+
+            <div class="content-section">
+                <h2>Our Pre-Handover Process</h2>
+                <div class="process-flow">
+                    <div class="process-item">
+                        <div class="icon">🔍</div>
+                        <h5>Internal Inspection</h5>
+                        <p>Quality team audit</p>
+                    </div>
+                    <div class="process-item">
+                        <div class="icon">📝</div>
+                        <h5>Punch List</h5>
+                        <p>Document all items</p>
+                    </div>
+                    <div class="process-item">
+                        <div class="icon">🔧</div>
+                        <h5>Rectification</h5>
+                        <p>Fix all issues</p>
+                    </div>
+                    <div class="process-item">
+                        <div class="icon">✅</div>
+                        <h5>Final Verification</h5>
+                        <p>Re-inspect fixes</p>
+                    </div>
+                    <div class="process-item">
+                        <div class="icon">🧹</div>
+                        <h5>Deep Cleaning</h5>
+                        <p>Complete cleaning</p>
+                    </div>
+                    <div class="process-item">
+                        <div class="icon">🔑</div>
+                        <h5>Handover</h5>
+                        <p>Keys & documents</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>What We Check</h2>
+                <p>Our final quality check covers every aspect of your building. Here's a detailed breakdown:</p>
+
+                <div class="checklist-grid">
+                    <div class="checklist-card">
+                        <h4>🏗️ Structural Elements</h4>
+                        <ul>
+                            <li>All concrete surfaces free from cracks, honeycombing, or defects</li>
+                            <li>Floor levels uniform and within tolerance</li>
+                            <li>Walls plumb and aligned correctly</li>
+                            <li>Roof/terrace properly sloped for drainage</li>
+                            <li>Expansion joints properly filled</li>
+                        </ul>
+                    </div>
+                    <div class="checklist-card">
+                        <h4>⚡ Electrical Systems</h4>
+                        <ul>
+                            <li>All switches, sockets, and lights working</li>
+                            <li>Correct polarity and earthing verified</li>
+                            <li>MCBs, ELCBs, and distribution board labeled</li>
+                            <li>All fans and exhaust fans operational</li>
+                            <li>Doorbell, TV points, and data points functional</li>
+                        </ul>
+                    </div>
+                    <div class="checklist-card">
+                        <h4>🚿 Plumbing Systems</h4>
+                        <ul>
+                            <li>All taps delivering water with good pressure</li>
+                            <li>Hot water system working (if installed)</li>
+                            <li>No leaks at any joints or fixtures</li>
+                            <li>Drains flowing freely without pooling</li>
+                            <li>All WC, sinks, and floor traps functional</li>
+                        </ul>
+                    </div>
+                    <div class="checklist-card">
+                        <h4>🚪 Doors & Windows</h4>
+                        <ul>
+                            <li>All doors opening and closing smoothly</li>
+                            <li>Locks, handles, and hinges working properly</li>
+                            <li>Windows sliding or opening as designed</li>
+                            <li>Rubber seals and weather strips intact</li>
+                            <li>Door stoppers and hardware installed</li>
+                        </ul>
+                    </div>
+                    <div class="checklist-card">
+                        <h4>🎨 Finishing Quality</h4>
+                        <ul>
+                            <li>Paint finish uniform without patches or marks</li>
+                            <li>Tile alignment and grouting quality checked</li>
+                            <li>No hollow tiles (tap test conducted)</li>
+                            <li>POP/gypsum ceiling smooth and crack-free</li>
+                            <li>Kitchen countertop and cabinets inspected</li>
+                        </ul>
+                    </div>
+                    <div class="checklist-card">
+                        <h4>🏡 External Areas</h4>
+                        <ul>
+                            <li>Driveway and parking area finished</li>
+                            <li>Compound wall and gate functional</li>
+                            <li>External lighting working</li>
+                            <li>Rainwater drainage properly directed</li>
+                            <li>Garden area (if any) cleaned and landscaped</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Punch List Rectification</h2>
+                <p>During inspection, any issues found are documented on a "punch list" with specific details and
+                    photographs. Our team then systematically addresses each item:</p>
+
+                <ul class="standard-features">
+                    <li><strong>Immediate Action</strong> — Minor issues like paint touch-ups, door adjustments, or
+                        fixture tightening are fixed immediately on the same day.</li>
+                    <li><strong>Scheduled Repairs</strong> — Larger items that require specific craftsmen or materials
+                        are scheduled with clear timelines.</li>
+                    <li><strong>Re-Inspection</strong> — Every rectified item is re-inspected by the quality team to
+                        verify proper correction.</li>
+                    <li><strong>Sign-Off</strong> — Only after all items are verified as complete is the project
+                        approved for handover.</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Deep Cleaning</h2>
+                <p>Before handover, we arrange for professional deep cleaning of your entire project. This includes:</p>
+
+                <div class="highlight-box">
+                    <h4>🧹 Our Cleaning Includes</h4>
+                    <p><strong>Construction Debris:</strong> All remaining debris, packaging, and waste materials
+                        removed. <strong>Floor Cleaning:</strong> All floors mopped, tiles polished, and grout lines
+                        cleaned. <strong>Glass Cleaning:</strong> All windows and glass doors cleaned inside and out.
+                        <strong>Bathroom Sanitization:</strong> All fixtures cleaned and sanitized. <strong>Kitchen
+                            Cleaning:</strong> Countertops, sinks, and cabinets wiped clean. <strong>Dust
+                            Removal:</strong> All surfaces, shelves, and corners dusted. <strong>External
+                            Areas:</strong> Driveway and compound swept clean.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Client Walkthrough</h2>
+                <p>After our internal inspection and rectification is complete, we invite you for a joint walkthrough of
+                    the completed project. During this session:</p>
+
+                <ul class="standard-features">
+                    <li><strong>Room-by-Room Tour</strong> — We walk through every space, explaining features and
+                        demonstrating systems.</li>
+                    <li><strong>System Orientation</strong> — You're briefed on electrical panels, water shut-offs, gas
+                        connections, and other systems.</li>
+                    <li><strong>Your Feedback</strong> — Any concerns you have are noted and addressed before handover.
+                    </li>
+                    <li><strong>Documentation Handover</strong> — All drawings, test reports, warranties, and
+                        maintenance guides are handed over.</li>
+                    <li><strong>Key Handover</strong> — All keys (main door, room doors, gate, mailbox) are formally
+                        handed over.</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Post-Handover Support</h2>
+                <p>Our relationship doesn't end at handover. We provide comprehensive after-sales support to ensure your
+                    complete satisfaction:</p>
+
+                <div class="highlight-box">
+                    <h4>📞 Our Support Promise</h4>
+                    <p><strong>Warranty Period:</strong> 1-year free rectification of any workmanship defects.
+                        <strong>Quick Response:</strong> All complaints attended within 48 hours. <strong>Maintenance
+                            Guidance:</strong> Tips on maintaining your home for longevity. <strong>Annual
+                            Checkup:</strong> Optional annual inspection service available. <strong>Always
+                            Available:</strong> Single point of contact for all your queries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="standard-cta">
+        <div class="container">
+            <h3>Move In With Complete Peace of Mind</h3>
+            <p>Our thorough final quality check ensures your new home is perfect in every way. No surprises, no pending
+                items, just a ready-to-live space.</p>
+            <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-column footer-center">
+                    <div class="footer-logo"><img src="assets/logo_new.png" alt="Patil Construction Logo"
+                            class="footer-logo-img">
+                        <div class="footer-logo-text"><span class="primary">Patil</span><span
+                                class="accent">Construction</span></div>
+                    </div>
+                    <p class="footer-description">Patil Construction & Interior is your one-stop solution for all
+                        construction and interior needs across Karnataka.</p>
+                    <div class="footer-gst">GST: 29ABHFP8635L1ZG</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">© 2023 Patil Construction & Interior. All rights reserved.</p>
+                    <div class="footer-bottom-links"><a href="privacy-policy.html">Privacy Policy</a><a
+                            href="terms.html">Terms & Conditions</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

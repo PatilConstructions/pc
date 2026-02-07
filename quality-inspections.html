@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Inspections | Patil Construction & Interior</title>
+    <meta name="description" content="Regular site inspections and quality audits at every stage of construction.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .standard-hero {
+            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .standard-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .standard-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .standard-content {
+            padding: 80px 0;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #8e44ad;
+            padding-left: 1rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.4rem;
+            color: #8e44ad;
+            margin: 2rem 0 1rem;
+        }
+
+        .content-section p {
+            color: #333;
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid #8e44ad;
+        }
+
+        .highlight-box h4 {
+            color: #7b1fa2;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .standard-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .standard-features li {
+            padding: 1.2rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--text-dark);
+            border-bottom: 1px solid #eee;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .standard-features li:last-child {
+            border-bottom: none;
+        }
+
+        .standard-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #8e44ad;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .inspection-stages {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stage-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #8e44ad;
+        }
+
+        .stage-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stage-card .stage-num {
+            background: #8e44ad;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .stage-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .stage-card ul {
+            padding-left: 1.5rem;
+        }
+
+        .stage-card li {
+            margin-bottom: 0.6rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .image-gallery {
+            background: #f9f9f9;
+            padding: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item .caption {
+            padding: 1.2rem;
+            background: white;
+        }
+
+        .gallery-item .caption h5 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .gallery-item .caption p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .standard-cta {
+            background: var(--primary);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .standard-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .standard-cta p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .standard-hero h1 {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper"><span class="logo-text">Patil</span><span
+                        class="logo-accent">Construction</span><span class="logo-subtext">& Interior</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+    </nav>
+
+    <section class="standard-hero">
+        <div class="container">
+            <a href="quality.html" class="back-link">← Back to Quality Standards</a>
+            <h1>🔍 Quality Inspections</h1>
+            <p>Rigorous quality checks at every stage of construction ensure that your project meets the highest
+                standards from foundation to finish.</p>
+        </div>
+    </section>
+
+    <section class="standard-content">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="content-section">
+                <h2>Multi-Stage Quality Assurance</h2>
+                <p>Quality inspection is not a final checkpoint at Patil Construction — it's an ongoing process that
+                    occurs at every stage of construction. Our comprehensive quality control system ensures that
+                    problems are identified and corrected early, before they can affect subsequent work or compromise
+                    the integrity of the structure.</p>
+
+                <p>Our quality control team consists of experienced engineers and supervisors who are trained to spot
+                    defects, verify compliance with specifications, and maintain detailed records of all inspections.
+                    They work independently of the construction team to provide unbiased quality assessments and
+                    recommendations.</p>
+
+                <p>Every inspection is documented with photographs, measurements, and detailed notes. Inspection
+                    checklists are used to ensure that no aspect is overlooked. Non-conformances are recorded, tracked,
+                    and verified after correction. This systematic approach ensures consistent quality across all our
+                    projects.</p>
+            </div>
+
+            <!-- Inspection Stages -->
+            <div class="content-section">
+                <h2>Stage-by-Stage Inspections</h2>
+                <p>Construction is divided into distinct stages, and each stage has specific quality checkpoints that
+                    must be cleared before proceeding to the next. Here's a detailed look at our inspection process:</p>
+
+                <div class="inspection-stages">
+                    <div class="stage-card">
+                        <h4><span class="stage-num">1</span> Pre-Construction Inspection</h4>
+                        <p>Before construction begins, we verify that the site is ready and all prerequisites are in
+                            place.</p>
+                        <ul>
+                            <li>Site boundary verification against approved drawings</li>
+                            <li>Soil investigation report review and foundation design verification</li>
+                            <li>All statutory approvals and permits in place</li>
+                            <li>Material samples and test certificates reviewed</li>
+                            <li>Construction methodology and sequence approved</li>
+                        </ul>
+                    </div>
+
+                    <div class="stage-card">
+                        <h4><span class="stage-num">2</span> Foundation Inspection</h4>
+                        <p>The foundation is the most critical part of any structure. We conduct multiple inspections
+                            during this phase.</p>
+                        <ul>
+                            <li>Excavation depth and dimensions verification</li>
+                            <li>Soil bearing capacity at founding level confirmed</li>
+                            <li>PCC (Plain Cement Concrete) level and thickness checked</li>
+                            <li>Reinforcement placement, spacing, cover, and lap lengths verified</li>
+                            <li>Formwork alignment and bracing inspected</li>
+                            <li>Concrete grade, slump, and placement quality monitored</li>
+                            <li>Curing regime verification for minimum 7 days</li>
+                        </ul>
+                    </div>
+
+                    <div class="stage-card">
+                        <h4><span class="stage-num">3</span> Structural Frame Inspection</h4>
+                        <p>Columns, beams, and slabs form the skeleton of the building. Each element is inspected before
+                            concrete is poured.</p>
+                        <ul>
+                            <li>Column position, size, and reinforcement as per drawing</li>
+                            <li>Beam reinforcement including stirrup spacing and anchorage</li>
+                            <li>Slab thickness, reinforcement, and openings verified</li>
+                            <li>Formwork surface finish and joint sealing checked</li>
+                            <li>Concrete cube samples collected for strength testing</li>
+                            <li>Proper vibration and compaction during concrete placement</li>
+                            <li>Form stripping time as per cube test results</li>
+                        </ul>
+                    </div>
+
+                    <div class="stage-card">
+                        <h4><span class="stage-num">4</span> Masonry Inspection</h4>
+                        <p>Wall construction quality significantly impacts the durability and appearance of the finished
+                            building.</p>
+                        <ul>
+                            <li>Brick/block quality and dimensions verified</li>
+                            <li>Mortar mix ratio and consistency checked</li>
+                            <li>Wall alignment (vertical and horizontal) monitored</li>
+                            <li>Joint thickness uniformity inspected</li>
+                            <li>Door and window opening dimensions confirmed</li>
+                            <li>Lintels position and reinforcement verified</li>
+                            <li>Block bonding pattern and toothing at junctions</li>
+                        </ul>
+                    </div>
+
+                    <div class="stage-card">
+                        <h4><span class="stage-num">5</span> MEP (Mechanical, Electrical, Plumbing) Inspection</h4>
+                        <p>Hidden services must be installed correctly before walls are plastered and closed.</p>
+                        <ul>
+                            <li>Electrical conduit routes and junction box positions</li>
+                            <li>Wire gauge and insulation quality verification</li>
+                            <li>Plumbing pipe sizes, slopes, and joint quality</li>
+                            <li>Water pressure testing for leaks</li>
+                            <li>Drainage system slope and trap verification</li>
+                            <li>Cable and pipe sleeve positions in slabs and walls</li>
+                            <li>Earthing and grounding system installation</li>
+                        </ul>
+                    </div>
+
+                    <div class="stage-card">
+                        <h4><span class="stage-num">6</span> Plastering & Finishing Inspection</h4>
+                        <p>Surface finishes define the aesthetic quality of the completed building.</p>
+                        <ul>
+                            <li>Plaster thickness and surface evenness</li>
+                            <li>Corner and edge finishing quality</li>
+                            <li>Tile alignment, grout quality, and edge cuts</li>
+                            <li>Paint preparation, primer, and finish coats</li>
+                            <li>Door and window fitting quality and hardware operation</li>
+                            <li>Waterproofing in wet areas — flood testing</li>
+                            <li>External finish and weatherproofing</li>
+                        </ul>
+                    </div>
+
+                    <div class="stage-card">
+                        <h4><span class="stage-num">7</span> Final Pre-Handover Inspection</h4>
+                        <p>The comprehensive final walkthrough before handing over the keys to our client.</p>
+                        <ul>
+                            <li>All electrical points and fixtures tested</li>
+                            <li>All plumbing fixtures and faucets tested for function and leaks</li>
+                            <li>Doors and windows operation and locking mechanism</li>
+                            <li>Floor and wall finish quality check</li>
+                            <li>External areas, driveway, and compound wall</li>
+                            <li>Punch list items identification and completion</li>
+                            <li>Cleaning and final presentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testing Section -->
+            <div class="content-section">
+                <h2>Laboratory Testing</h2>
+                <p>We don't rely only on visual inspection. Critical materials and work are tested in accredited
+                    laboratories to verify that they meet the specified standards. All test reports are documented and
+                    provided to the client as part of the project documentation.</p>
+
+                <div class="highlight-box">
+                    <h4>🧪 Tests We Conduct</h4>
+                    <p><strong>Concrete Cube Test:</strong> Samples taken every 50 cu.m or per day's work. Tested at 7
+                        and 28 days for compressive strength. <strong>Soil Test:</strong> Standard penetration test
+                        (SPT) and plate load test for foundation design. <strong>Reinforcement Test:</strong> Tensile
+                        and bend test for each lot of steel. <strong>Water Tank Test:</strong> 24-hour water retention
+                        test for overhead and underground tanks. <strong>Pressure Test:</strong> Hydrostatic pressure
+                        testing of all plumbing lines before concealment.</p>
+                </div>
+            </div>
+
+            <!-- Documentation Section -->
+            <div class="content-section">
+                <h2>Inspection Documentation</h2>
+                <p>Every inspection is thoroughly documented and archived. This creates a complete quality history of
+                    your project that is valuable for maintenance, future modifications, and resale. Our documentation
+                    includes:</p>
+
+                <ul class="standard-features">
+                    <li><strong>Inspection Checklists</strong> — Standardized checklists for each stage ensuring
+                        comprehensive coverage of all quality aspects. Signed off by the inspector and supervisor.</li>
+                    <li><strong>Photographic Records</strong> — Date-stamped photographs of critical construction
+                        stages, reinforcement layout, concealed services, and completed finishes.</li>
+                    <li><strong>Non-Conformance Reports</strong> — Documentation of any quality issues found, root cause
+                        analysis, corrective action taken, and verification of correction.</li>
+                    <li><strong>Material Test Reports</strong> — Certified test reports for cement, steel, concrete, and
+                        other critical materials. Organized by stage and batch for easy reference.</li>
+                    <li><strong>As-Built Drawings</strong> — Final drawings reflecting actual construction, including
+                        any deviations from original design that were approved during construction.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-gallery">
+        <div class="container">
+            <h2 class="section-title">Quality Inspections in Action</h2>
+            <div class="gallery-grid">
+                <a href="inspections/foundation-inspection.html" class="gallery-item"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1541976590-713941681591?w=400&h=220&fit=crop"
+                        alt="Foundation Check">
+                    <div class="caption">
+                        <h5>Foundation Inspection</h5>
+                        <p>Verifying excavation depth, reinforcement, and soil conditions</p>
+                    </div>
+                </a>
+                <a href="inspections/structural-review.html" class="gallery-item"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=220&fit=crop"
+                        alt="Structural Review">
+                    <div class="caption">
+                        <h5>Structural Review</h5>
+                        <p>Column and beam reinforcement verification before concrete</p>
+                    </div>
+                </a>
+                <a href="inspections/material-testing.html" class="gallery-item"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=220&fit=crop"
+                        alt="Material Testing">
+                    <div class="caption">
+                        <h5>Material Testing</h5>
+                        <p>Concrete cube testing and steel quality verification</p>
+                    </div>
+                </a>
+                <a href="inspections/mep-inspection.html" class="gallery-item"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=220&fit=crop"
+                        alt="MEP Inspection">
+                    <div class="caption">
+                        <h5>MEP Inspection</h5>
+                        <p>Electrical and plumbing system verification</p>
+                    </div>
+                </a>
+                <a href="inspections/finishing-inspection.html" class="gallery-item"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=220&fit=crop"
+                        alt="Finishing Check">
+                    <div class="caption">
+                        <h5>Finishing Inspection</h5>
+                        <p>Surface finish quality and alignment checks</p>
+                    </div>
+                </a>
+                <a href="inspections/final-walkthrough.html" class="gallery-item"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=220&fit=crop"
+                        alt="Final Walkthrough">
+                    <div class="caption">
+                        <h5>Final Walkthrough</h5>
+                        <p>Comprehensive pre-handover inspection</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="standard-cta">
+        <div class="container">
+            <h3>Quality You Can Count On</h3>
+            <p>Every project undergoes our rigorous multi-stage inspection process. We don't cut corners because your
+                safety and satisfaction depend on it.</p>
+            <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

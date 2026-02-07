@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision & Timely Delivery | Patil Construction & Interior</title>
+    <meta name="description" content="Our commitment to precision engineering and on-time project delivery.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .commitment-hero {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .commitment-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .commitment-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .commitment-content {
+            padding: 80px 0;
+        }
+
+        .commitment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .commitment-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .commitment-text p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .commitment-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .commitment-features li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--text-dark);
+            border-bottom: 1px solid #eee;
+        }
+
+        .commitment-features li:last-child {
+            border-bottom: none;
+        }
+
+        .commitment-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .commitment-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .commitment-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .commitment-cta {
+            background: var(--primary);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .commitment-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .commitment-cta p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .commitment-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .commitment-hero h1 {
+                font-size: 2rem;
+            }
+
+            .commitment-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">Patil</span><span class="logo-accent">Construction</span>
+                    <span class="logo-subtext">& Interior</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+    </nav>
+
+    <section class="commitment-hero">
+        <div class="container">
+            <a href="index.html#about" class="back-link">← Back to About</a>
+            <h1>⏱️ Precision & Timely Delivery</h1>
+            <p>Delivering projects on schedule without compromising on quality</p>
+        </div>
+    </section>
+
+    <section class="commitment-content">
+        <div class="container">
+            <div class="commitment-grid">
+                <div class="commitment-text">
+                    <h2>On Time, Every Time</h2>
+                    <p>We understand that time is valuable — and in construction, delays mean more than just
+                        inconvenience. They mean extended rental costs, disrupted life plans, additional interest on
+                        loans, and mounting frustration. That's why we meticulously plan every project to ensure timely
+                        completion without compromising quality.</p>
+
+                    <p>Our project management approach combines precision scheduling with proactive problem-solving. We
+                        anticipate challenges before they occur, maintain buffer time for unexpected issues, and keep
+                        multiple activities running in parallel to maximize efficiency. Every day on site is planned in
+                        advance, with clear goals and accountability.</p>
+
+                    <p>From the first day of foundation work to the final handover, we maintain strict timelines while
+                        ensuring every detail meets our exacting standards. We believe that delivering on time is not
+                        about rushing — it's about planning properly, working efficiently, and staying organized
+                        throughout the project lifecycle.</p>
+                </div>
+                <div class="commitment-image">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
+                        alt="Precision Delivery">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="commitment-content" style="background: #f9f9f9;">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center;">How We Ensure
+                Timely Delivery</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #e74c3c;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">📅 Detailed Project
+                        Planning</h4>
+                    <p style="color: #666; line-height: 1.7;">Before breaking ground, we create a comprehensive project
+                        schedule with realistic timelines for each phase. We identify dependencies, critical paths, and
+                        potential bottlenecks. You receive a detailed timeline showing when each stage will begin and
+                        end.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #e74c3c;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">📊 Weekly Progress
+                        Tracking</h4>
+                    <p style="color: #666; line-height: 1.7;">Every week, you receive a progress report comparing actual
+                        vs. planned work. Photos, completed tasks, and upcoming activities are shared transparently. If
+                        we're behind, you know immediately — along with our plan to catch up.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #e74c3c;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🔧 Resource Pre-Planning
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Materials are ordered well in advance, labor is scheduled
+                        before needed, and equipment is arranged ahead of time. No waiting for cement deliveries, no
+                        searching for skilled masons at the last minute. Everything is ready when required.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #e74c3c;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">⚡ Parallel Activities
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">We maximize efficiency by running multiple non-dependent
+                        activities simultaneously. While concrete is curing, we're working on other areas. While
+                        plumbing rough-in happens, electrical work progresses elsewhere. Smart sequencing saves weeks.
+                    </p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #e74c3c;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🛠️ Proactive Problem
+                        Solving</h4>
+                    <p style="color: #666; line-height: 1.7;">Problems are inevitable in construction. What matters is
+                        how quickly they're resolved. Our experienced team anticipates issues, has backup plans ready,
+                        and doesn't let challenges derail the schedule. Quick decisions keep projects moving.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #e74c3c;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🌧️ Weather & Buffer
+                        Planning</h4>
+                    <p style="color: #666; line-height: 1.7;">We account for monsoons, holidays, and approval delays in
+                        our schedules. Realistic buffer time is built into critical phases. We work extra hours when
+                        needed to make up for unavoidable delays. The final deadline is sacred.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="commitment-content">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;">Our Precision Commitments</h2>
+
+            <ul class="commitment-features">
+                <li><strong>Realistic Timeline Promises</strong> — We don't make unrealistic promises to win contracts.
+                    Our timelines are achievable, and we commit only to what we can deliver. Honest estimates upfront,
+                    no disappointments later.</li>
+                <li><strong>Milestone-Based Progress</strong> — Your project is divided into clear milestones —
+                    foundation, structure, roofing, finishing. Each milestone has a target date, and you can track our
+                    progress against these markers.</li>
+                <li><strong>Daily Site Supervision</strong> — Our site supervisors are present every working day,
+                    ensuring that work progresses as planned. They manage labor, monitor quality, and ensure schedule
+                    adherence.</li>
+                <li><strong>Client Decision Timelines</strong> — We communicate early when client decisions are needed —
+                    tile selections, paint colors, fixture choices. Pending decisions don't hold up construction because
+                    we plan for them in advance.</li>
+                <li><strong>Approval Process Management</strong> — We handle all approval processes proactively —
+                    building permissions, occupancy certificates, utility connections. We start applications early to
+                    avoid handover delays.</li>
+                <li><strong>Contingency Planning</strong> — Every project has a contingency plan for common issues —
+                    material shortages, labor unavailability, weather disruptions. We're never caught unprepared.</li>
+                <li><strong>Commitment to Deadlines</strong> — If we commit to a handover date, we honor it. Our track
+                    record speaks for itself — the vast majority of our projects are delivered on or before schedule.
+                </li>
+            </ul>
+
+            <div
+                style="background: linear-gradient(135deg, #fef2f2, #fecaca); padding: 2rem; border-radius: 12px; margin-top: 2rem; border-left: 4px solid #e74c3c;">
+                <h4 style="color: #dc2626; margin-bottom: 1rem;">⏱️ Our Timeline Promise</h4>
+                <p style="color: #333; line-height: 1.8; margin: 0;">We provide a written completion timeline as part of
+                    our agreement. Barring exceptional circumstances (which we communicate immediately), we deliver on
+                    time. For any delays on our part, we take responsibility and work extended hours to catch up. Your
+                    time matters to us — we treat your deadline as our commitment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="commitment-cta">
+        <div class="container">
+            <h3>Ready to Start Your Project?</h3>
+            <p>Experience punctual project delivery with precision execution — on time, on budget, without compromises
+            </p>
+            <a href="index.html#contact" class="btn btn-primary">Get Your Timeline</a>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

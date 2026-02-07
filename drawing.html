@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D & 3D Drawing Services | Patil Construction & Interior</title>
+    <meta name="description"
+        content="Professional 2D and 3D architectural drawing services - Detailed plans and realistic visualizations for your project.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .service-detail-hero {
+            background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .service-detail-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-detail-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+
+
+        .service-detail-content {
+            padding: 80px 0;
+        }
+
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .service-detail-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-detail-text p {
+            color: black;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .service-features li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text);
+        }
+
+        .service-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        .service-detail-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-detail-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .service-cta {
+            background: var(--bg-light);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .service-cta h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-cta p {
+            color: black;
+            margin-bottom: 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .service-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .service-detail-hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-detail-image {
+                order: -1;
+            }
+        }
+
+        /* Project Gallery Styles */
+        .project-gallery {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .gallery-subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            margin-top: -2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-image {
+            overflow: hidden;
+            height: 220px;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-card:hover .gallery-image img {
+            transform: scale(1.1);
+        }
+
+        .gallery-info {
+            padding: 1.5rem;
+        }
+
+        .gallery-info h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .gallery-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">Patil</span><span class="logo-accent">Construction</span>
+                    <span class="logo-subtext">& Interior</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-detail-hero">
+        <div class="container">
+            <a href="index.html#services" class="back-link">← Back to Services</a>
+            <h1>📐 2D & 3D Drawing</h1>
+            <p>Detailed architectural plans and realistic 3D visualizations of your future project</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="service-detail-content">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-text">
+                    <h2>Visualize Before You Build</h2>
+                    <p>Our expert team creates detailed 2D floor plans and stunning 3D visualizations that bring your
+                        project to life before construction begins. This helps you make informed decisions and avoid
+                        costly changes during construction. A well-drawn plan is the foundation of successful
+                        construction — it prevents misunderstandings, reduces errors, and ensures everyone is aligned on
+                        the vision.</p>
+
+                    <p>Using industry-leading CAD software and 3D rendering tools, we provide accurate, to-scale
+                        drawings that meet all regulatory requirements and serve as precise blueprints for construction.
+                        Our drawings are not just pretty pictures — they're functional construction documents that
+                        contractors can build from.</p>
+
+                    <p>Whether you need basic floor plans for a simple renovation or comprehensive construction
+                        documents for a multi-story building, our drawing services scale to match your project
+                        requirements. We work closely with you to understand your vision and translate it into technical
+                        drawings that capture every detail.</p>
+                </div>
+                <div class="service-detail-image">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&h=400&fit=crop"
+                        alt="2D & 3D Drawing Services">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drawing Types Section -->
+    <section class="service-detail-content" style="background: #f9f9f9;">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center;">Our Drawing
+                Services</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #2980b9;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">📋 2D Floor Plans</h4>
+                    <p style="color: #666; line-height: 1.7;">Precise, to-scale floor plans showing room layouts,
+                        dimensions, door/window positions, wall thicknesses, and furniture layouts. The essential
+                        blueprint for any construction or renovation project.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #2980b9;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏛️ Elevation Drawings
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Detailed front, rear, and side elevation drawings showing
+                        your building's external appearance — window placements, roof lines, height dimensions, and
+                        facade treatments.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #2980b9;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏠 3D Exterior Renders
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Photorealistic 3D visualizations of your building's
+                        exterior from multiple angles. See exactly how your completed building will look — including
+                        landscape, driveway, and surrounding context.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #2980b9;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🛋️ 3D Interior Renders
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Stunning interior visualizations showing room aesthetics —
+                        furniture, lighting, colors, textures, and finishes. Make interior design decisions with
+                        confidence before execution begins.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #2980b9;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🎬 Walkthrough Videos
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Animated 3D walkthroughs that let you virtually "walk
+                        through" your building before it's built. Experience the flow between rooms and understand
+                        spatial relationships in an immersive way.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #2980b9;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">📑 Working Drawings</h4>
+                    <p style="color: #666; line-height: 1.7;">Detailed construction documents with structural sections,
+                        plumbing layouts, electrical layouts, door-window schedules, and specifications — everything
+                        contractors need to build accurately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drawing Process Section -->
+    <section class="service-detail-content">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center;">Our Drawing
+                Process</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div
+                    style="background: linear-gradient(135deg, #eaf2f8, #d4e6f1); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">1️⃣</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Requirement Gathering</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Understanding your needs — room requirements, site
+                        constraints, budget, style preferences, and special requirements.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #d4e6f1, #aed6f1); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">2️⃣</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Concept Sketches</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Quick hand-sketches or rough digital layouts to explore
+                        different design options and spatial arrangements.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #aed6f1, #85c1e9); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">3️⃣</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Draft 2D Plans</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Detailed CAD floor plans for review — room dimensions,
+                        layout, circulation paths, and basic specifications.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #85c1e9, #5dade2); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">4️⃣</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">3D Modeling</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Creating 3D models from approved 2D plans for exterior
+                        and interior visualization and virtual walkthroughs.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #5dade2, #3498db); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">5️⃣</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Revisions</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Incorporating your feedback and making adjustments until
+                        the design perfectly matches your vision and requirements.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #3498db, #2980b9); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">6️⃣</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Final Deliverables</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Complete drawing package — printed drawings, digital
+                        files, approval documents, and 3D renders ready for use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="service-detail-content" style="background: #f9f9f9;">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;">What's Included in Our Drawing
+                Package</h2>
+
+            <ul class="service-features">
+                <li><strong>Site Plan</strong> — Overall plot layout showing building position, setbacks, parking,
+                    garden areas, compound wall, and entry points.</li>
+                <li><strong>Floor Plans</strong> — Detailed plans for each floor with room dimensions, door-window
+                    positions, staircase, and furniture layouts.</li>
+                <li><strong>Elevations</strong> — Front, rear, left, and right elevation drawings showing the complete
+                    external appearance of your building.</li>
+                <li><strong>Section Drawings</strong> — Cross-sections showing internal heights, staircase construction,
+                    roof levels, and foundation depth.</li>
+                <li><strong>Structural Layout</strong> — Column positions, beam layout, slab details, and foundation
+                    plan for RCC construction.</li>
+                <li><strong>MEP Layouts</strong> — Electrical points, plumbing lines, and drainage layouts for
+                    contractor reference.</li>
+                <li><strong>3D Renders</strong> — Photorealistic exterior views (2-4 angles) and key interior room
+                    renders.</li>
+                <li><strong>Approval Drawings</strong> — Municipal/Panchayat approval formatted drawings meeting local
+                    regulatory requirements.</li>
+            </ul>
+
+            <div
+                style="background: linear-gradient(135deg, #eaf2f8, #d4e6f1); padding: 2rem; border-radius: 12px; margin-top: 2rem; border-left: 4px solid #2980b9;">
+                <h4 style="color: #1a5276; margin-bottom: 1rem;">📐 Our Drawing Promise</h4>
+                <p style="color: #333; line-height: 1.8; margin: 0;">Our drawings aren't just for show — they're
+                    construction-ready documents that contractors can build from with confidence. Every dimension is
+                    accurate, every detail is specified, and every drawing is coordinated. When you build from our
+                    drawings, there are no surprises on site.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Project Gallery Section -->
+    <section class="project-gallery">
+        <div class="container">
+            <h2 class="section-title">Our Design Portfolio</h2>
+            <p class="gallery-subtitle">Architectural drawings and 3D visualizations</p>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1574691250077-03a929faece5?w=400&h=300&fit=crop"
+                            alt="Floor Plans">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Detailed Floor Plans</h4>
+                        <p>Precise 2D floor plans with measurements</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&h=300&fit=crop"
+                            alt="3D Render">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>3D Exterior Rendering</h4>
+                        <p>Photorealistic exterior visualizations</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=400&h=300&fit=crop"
+                            alt="Interior 3D">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Interior 3D Design</h4>
+                        <p>Stunning interior visualizations</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f?w=400&h=300&fit=crop"
+                            alt="Elevation">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Elevation Designs</h4>
+                        <p>Beautiful front and side elevations</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&h=300&fit=crop"
+                            alt="Site Plan">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Site Planning</h4>
+                        <p>Comprehensive site layout plans</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop"
+                            alt="Modern Design">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Modern Architecture</h4>
+                        <p>Contemporary design concepts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+        <div class="container">
+            <h3>Need Detailed Plans for Your Project?</h3>
+            <p style="color: #000000 !important;">Let us create precise drawings and stunning visualizations</p>
+            <a href="index.html#contact" class="btn btn-primary">Request Drawings</a>
+        </div>
+    </section>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

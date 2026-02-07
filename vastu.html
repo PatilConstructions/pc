@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vastu Planning Services | Patil Construction & Interior</title>
+    <meta name="description"
+        content="Professional Vastu Shastra planning services - Harmonize your space with traditional principles for prosperity.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .service-detail-hero {
+            background: linear-gradient(135deg, #b7950b 0%, #d4ac0d 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .service-detail-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-detail-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .service-detail-content {
+            padding: 80px 0;
+        }
+
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .service-detail-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-detail-text p {
+            color: black;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .service-features li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text);
+        }
+
+        .service-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #d4ac0d;
+            font-weight: bold;
+        }
+
+        .service-detail-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-detail-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .service-cta {
+            background: var(--bg-light);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .service-cta h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-cta p {
+            color: black;
+            margin-bottom: 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .service-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .service-detail-hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-detail-image {
+                order: -1;
+            }
+        }
+
+        /* Project Gallery Styles */
+        .project-gallery {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .gallery-subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            margin-top: -2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-image {
+            overflow: hidden;
+            height: 220px;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-card:hover .gallery-image img {
+            transform: scale(1.1);
+        }
+
+        .gallery-info {
+            padding: 1.5rem;
+        }
+
+        .gallery-info h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .gallery-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">Patil</span><span class="logo-accent">Construction</span>
+                    <span class="logo-subtext">& Interior</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-detail-hero">
+        <div class="container">
+            <a href="index.html#services" class="back-link">← Back to Services</a>
+            <h1>🕉️ Vastu Planning</h1>
+            <p>Harmonize your space with traditional Vastu Shastra principles for prosperity</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="service-detail-content">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-text">
+                    <h2>Ancient Wisdom, Modern Living</h2>
+                    <p>Vastu Shastra is the ancient Indian science of architecture that aligns structures with cosmic
+                        energies. Our Vastu planning services ensure your home or office is designed to promote health,
+                        wealth, and happiness. For thousands of years, this wisdom has guided how Indians build their
+                        homes — and for good reason.</p>
+
+                    <p>Our experts combine traditional Vastu principles with modern architectural requirements to create
+                        spaces that are both spiritually aligned and practically functional. We don't compromise on
+                        practical usability for Vastu, nor do we ignore Vastu for practicality — we find the balance.
+                    </p>
+
+                    <p>Whether you're building new or modifying an existing property, our Vastu consultants analyze your
+                        space, identify deficiencies, and suggest corrections that work within your budget and
+                        structural constraints. Simple changes in colors, objects, or room usage can often address Vastu
+                        concerns without costly renovations.</p>
+                </div>
+                <div class="service-detail-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop"
+                        alt="Vastu Planning Services">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vastu Services Section -->
+    <section class="service-detail-content" style="background: #f9f9f9;">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center;">Our Vastu
+                Services</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #d4ac0d;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏠 New Construction Vastu
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Complete Vastu planning from plot selection to final room
+                        layouts. We design your home from scratch aligned with Vastu principles — the best time to
+                        incorporate Vastu without compromises.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #d4ac0d;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🔍 Existing Property
+                        Analysis</h4>
+                    <p style="color: #666; line-height: 1.7;">Comprehensive Vastu audit of your current home or office.
+                        We identify Vastu deficiencies and suggest practical remedies — from simple fixes to room-usage
+                        changes to minor renovations.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #d4ac0d;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">📐 Plot & Land Selection
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Before you buy, let us evaluate land plots for Vastu
+                        compliance — shape, slope, road positions, surroundings, and energy flow. Choose land that sets
+                        you up for Vastu-compliant construction.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #d4ac0d;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏢 Commercial Vastu</h4>
+                    <p style="color: #666; line-height: 1.7;">Vastu for shops, offices, factories, and commercial
+                        buildings. Proper placement of entrances, cash counters, owner seating, and work areas to
+                        attract prosperity and success.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #d4ac0d;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🛠️ Vastu Corrections
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Non-structural remedies for Vastu defects — mirror
+                        placements, color changes, object positioning, pyramids, and yantras. Improve your space's
+                        energy without breaking walls.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #d4ac0d;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">📋 Plan Review</h4>
+                    <p style="color: #666; line-height: 1.7;">Have architectural plans ready? We review them from a
+                        Vastu perspective and suggest modifications before construction begins — the easiest time to
+                        make Vastu adjustments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room-wise Vastu Section -->
+    <section class="service-detail-content">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center;">Room-wise Vastu
+                Guidelines</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div
+                    style="background: linear-gradient(135deg, #fef9e7, #fcf3cf); padding: 1.5rem; border-radius: 12px;">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">🚪 Main Entrance</h4>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">North, East, or Northeast facing
+                        entrances are considered most auspicious. The main door should be the largest and most prominent
+                        door in the house.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #fef5e7, #fdebd0); padding: 1.5rem; border-radius: 12px;">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">🛏️ Master Bedroom</h4>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">Southwest corner is ideal for the
+                        master bedroom. Bed should have head towards South or East. Avoid mirrors facing the bed
+                        directly.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #fbeee6, #f5cba7); padding: 1.5rem; border-radius: 12px;">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">🍳 Kitchen</h4>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">Southeast corner (Agni corner) is best
+                        for kitchen. Cook facing East. Kitchen should not be directly below or above the toilet or puja
+                        room.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #fef9e7, #f9e79f); padding: 1.5rem; border-radius: 12px;">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">🕉️ Puja Room</h4>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">Northeast corner is the most sacred.
+                        Face East or West while praying. Keep the puja room clean and clutter-free at all times.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #fcf3cf, #f7dc6f); padding: 1.5rem; border-radius: 12px;">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">🛋️ Living Room</h4>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">North, East, or Northeast works well.
+                        Heavy furniture should be in West or South. Entertainment unit ideally in Southeast.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #fdebd0, #e59866); padding: 1.5rem; border-radius: 12px;">
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">🚿 Bathrooms</h4>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">Northwest or West is ideal. Avoid
+                        Northeast bathroom if possible. Keep bathroom doors closed when not in use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="service-detail-content" style="background: #f9f9f9;">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;">Our Vastu Philosophy</h2>
+
+            <ul class="service-features">
+                <li><strong>Balanced Approach</strong> — We respect traditional Vastu while being practical. A perfectly
+                    Vastu-compliant but impractical home helps no one. We find solutions that work in the real world.
+                </li>
+                <li><strong>Scientific Basis</strong> — Much of Vastu is based on sound principles — sunlight direction,
+                    wind flow, natural ventilation. We explain the "why" behind Vastu recommendations.</li>
+                <li><strong>No Fear-Mongering</strong> — We don't use scare tactics. Vastu should bring peace, not
+                    anxiety. We present options and let you decide what changes you're comfortable making.</li>
+                <li><strong>Practical Remedies</strong> — When structural changes aren't possible, we suggest effective
+                    non-structural remedies. Many Vastu corrections don't require breaking walls.</li>
+                <li><strong>Construction Integration</strong> — Unlike standalone Vastu consultants, we also build. This
+                    means our Vastu plans are architecturally sound and constructable.</li>
+                <li><strong>Regional Understanding</strong> — We understand local climate and cultural practices in
+                    Karnataka. Our Vastu recommendations fit the local context.</li>
+            </ul>
+
+            <div
+                style="background: linear-gradient(135deg, #fef9e7, #fcf3cf); padding: 2rem; border-radius: 12px; margin-top: 2rem; border-left: 4px solid #d4ac0d;">
+                <h4 style="color: #b7950b; margin-bottom: 1rem;">🕉️ Our Vastu Promise</h4>
+                <p style="color: #333; line-height: 1.8; margin: 0;">We believe Vastu should enhance your peace of mind,
+                    not add to your stress. Our approach brings the wisdom of Vastu Shastra into your home in a
+                    balanced, practical way. We create spaces that feel right — both spiritually aligned and wonderfully
+                    livable.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Project Gallery Section -->
+    <section class="project-gallery">
+        <div class="container">
+            <h2 class="section-title">Vastu-Compliant Designs</h2>
+            <p class="gallery-subtitle">Harmonious spaces designed with ancient wisdom</p>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop"
+                            alt="Vastu Home">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Vastu-Compliant Villa</h4>
+                        <p>East-facing entrance for prosperity</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=400&h=300&fit=crop"
+                            alt="Living Space">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Harmonious Living</h4>
+                        <p>Balanced room layouts for positive energy</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop"
+                            alt="Kitchen">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Kitchen Placement</h4>
+                        <p>South-east positioned for fire element</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
+                            alt="Bedroom">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Peaceful Bedrooms</h4>
+                        <p>South-west master bedroom design</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400&h=300&fit=crop"
+                            alt="Entrance">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Auspicious Entrance</h4>
+                        <p>Main door positioned for good fortune</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
+                            alt="Modern Vastu">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Modern Vastu Home</h4>
+                        <p>Contemporary design with Vastu principles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+        <div class="container">
+            <h3>Want a Vastu-Compliant Design?</h3>
+            <p style="color: #000000 !important;">Consult with our Vastu experts for a harmonious living space</p>
+            <a href="index.html#contact" class="btn btn-primary">Book Consultation</a>
+        </div>
+    </section>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

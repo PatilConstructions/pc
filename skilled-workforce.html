@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skilled Workforce | Patil Construction & Interior</title>
+    <meta name="description" content="Trained and experienced professionals handling every aspect of construction.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .standard-hero {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .standard-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .standard-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .standard-content {
+            padding: 80px 0;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #34495e;
+            padding-left: 1rem;
+        }
+
+        .content-section p {
+            color: #333;
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #eceff1, #cfd8dc);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid #34495e;
+        }
+
+        .highlight-box h4 {
+            color: #37474f;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .standard-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .standard-features li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--text-dark);
+            border-bottom: 1px solid #eee;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .standard-features li:last-child {
+            border-bottom: none;
+        }
+
+        .standard-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #34495e;
+            font-weight: bold;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .team-card .content {
+            padding: 1.5rem;
+        }
+
+        .team-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .stat-box .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #34495e;
+        }
+
+        .stat-box .label {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .standard-cta {
+            background: var(--primary);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .standard-hero h1 {
+                font-size: 2rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper"><span class="logo-text">Patil</span><span
+                        class="logo-accent">Construction</span><span class="logo-subtext">& Interior</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+    </nav>
+
+    <section class="standard-hero">
+        <div class="container">
+            <a href="quality.html" class="back-link">← Back to Quality Standards</a>
+            <h1>👷 Skilled Workforce</h1>
+            <p>Behind every successful construction project is a team of skilled professionals who bring expertise,
+                dedication, and craftsmanship to their work.</p>
+        </div>
+    </section>
+
+    <section class="standard-content">
+        <div class="container">
+            <div class="content-section">
+                <h2>Our People, Our Strength</h2>
+                <p>At Patil Construction & Interior, we recognize that our workforce is our greatest asset. Buildings
+                    are only as good as the hands that build them, which is why we invest heavily in recruiting,
+                    training, and retaining the best craftsmen in the industry. Our team comprises experienced
+                    professionals who take pride in their work and are committed to delivering excellence.</p>
+
+                <p>We maintain a core team of full-time masons, carpenters, electricians, plumbers, and supervisors who
+                    have been with us for years and understand our quality standards intimately. For larger projects, we
+                    scale up with verified contractors who have proven track records. This ensures consistent quality
+                    across all projects.</p>
+
+                <p>Every member of our team is treated with respect and fair compensation. We believe that happy workers
+                    produce quality work, and this reflects in the attention to detail visible in our finished projects.
+                    Our low attrition rate means you're getting the benefit of experienced hands who have refined their
+                    skills over many years.</p>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-box">
+                    <div class="number">50+</div>
+                    <div class="label">Skilled Workers</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">10+</div>
+                    <div class="label">Avg. Years Experience</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">30+</div>
+                    <div class="label">Projects Completed</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">95%</div>
+                    <div class="label">Worker Retention</div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Our Expert Teams</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="content">
+                            <h4>🧱 Master Masons</h4>
+                            <p>15+ years average experience in brick/block work, concrete, plastering. Experts in proper
+                                bonding, level work, and clean finishes.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="content">
+                            <h4>🪚 Expert Carpenters</h4>
+                            <p>12+ years experience in formwork, door/window frames, modular furniture. They create
+                                precise joints and smooth finishes.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="content">
+                            <h4>⚡ Licensed Electricians</h4>
+                            <p>10+ years experience in modern electrical systems, safety protocols, and energy-efficient
+                                installations.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="content">
+                            <h4>🔧 Expert Plumbers</h4>
+                            <p>10+ years experience in CPVC, GI, and PPR plumbing systems, drainage design, and sanitary
+                                installations.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="content">
+                            <h4>🎨 Professional Painters</h4>
+                            <p>8+ years experience in surface preparation, primer application, and finish coating
+                                techniques.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="content">
+                            <h4>📋 Site Supervisors</h4>
+                            <p>15+ years experience in coordinating activities, ensuring quality standards, and
+                                maintaining schedules.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Training & Development</h2>
+                <p>We believe in continuous improvement. Our workforce undergoes regular training to stay updated with
+                    the latest construction techniques, material technologies, and safety protocols.</p>
+
+                <div class="highlight-box">
+                    <h4>🎓 Our Training Programs</h4>
+                    <p><strong>Technical Training:</strong> New materials (AAC blocks, ready-mix), power tools, quality
+                        standards, drawing interpretation, measurement techniques. <strong>Safety Training:</strong> PPE
+                        usage, scaffold safety, first aid, fire safety, electrical safety. Regular refresher courses
+                        keep everyone updated.</p>
+                </div>
+
+                <ul class="standard-features">
+                    <li><strong>Daily Toolbox Talks</strong> — Every workday begins with discussion of tasks, safety
+                        reminders, and quality focus areas.</li>
+                    <li><strong>Quality Incentives</strong> — Workers delivering high-quality work are recognized and
+                        rewarded.</li>
+                    <li><strong>Skill Assessments</strong> — Regular assessments identify areas for improvement and
+                        training needs.</li>
+                    <li><strong>Fair Compensation</strong> — Above-market wages attract and retain the best talent.</li>
+                    <li><strong>Safe Working Conditions</strong> — Proper safety equipment, clean facilities, and
+                        respectful environment.</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Expert Supervision</h2>
+                <p>Even the best craftsmen need proper supervision. Our projects are managed by experienced site
+                    supervisors and project engineers who ensure work meets our quality standards.</p>
+
+                <ul class="standard-features">
+                    <li><strong>Daily Monitoring</strong> — Site supervisors present every working day to monitor
+                        progress and verify quality.</li>
+                    <li><strong>Work Planning</strong> — Each day's work is planned in advance for smooth coordination
+                        between trades.</li>
+                    <li><strong>Quality Verification</strong> — Before work proceeds to next stage, supervisor verifies
+                        compliance with specifications.</li>
+                    <li><strong>Issue Resolution</strong> — Problems are identified and resolved quickly to prevent
+                        delays.</li>
+                    <li><strong>Client Communication</strong> — Regular updates and prompt addressing of any concerns.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="standard-cta">
+        <div class="container">
+            <h3>Expert Hands Build Better Homes</h3>
+            <p>When you choose Patil Construction, you get access to skilled professionals who take pride in building
+                your dream.</p>
+            <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-column footer-center">
+                    <div class="footer-logo"><img src="assets/logo_new.png" alt="Patil Construction Logo"
+                            class="footer-logo-img">
+                        <div class="footer-logo-text"><span class="primary">Patil</span><span
+                                class="accent">Construction</span></div>
+                    </div>
+                    <p class="footer-description">Patil Construction & Interior is your one-stop solution for all
+                        construction and interior needs across Karnataka.</p>
+                    <div class="footer-gst">GST: 29ABHFP8635L1ZG</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">© 2023 Patil Construction & Interior. All rights reserved.</p>
+                    <div class="footer-bottom-links"><a href="privacy-policy.html">Privacy Policy</a><a
+                            href="terms.html">Terms & Conditions</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

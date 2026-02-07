@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architectural Excellence | Patil Construction & Interior</title>
+    <meta name="description" content="Award-worthy architectural designs that blend aesthetics with functionality.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .commitment-hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .commitment-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .commitment-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .commitment-content {
+            padding: 80px 0;
+        }
+
+        .commitment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .commitment-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .commitment-text p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .commitment-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .commitment-features li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--text-dark);
+            border-bottom: 1px solid #eee;
+        }
+
+        .commitment-features li:last-child {
+            border-bottom: none;
+        }
+
+        .commitment-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .commitment-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .commitment-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .commitment-cta {
+            background: var(--primary);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .commitment-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .commitment-cta p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .commitment-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .commitment-hero h1 {
+                font-size: 2rem;
+            }
+
+            .commitment-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">Patil</span><span class="logo-accent">Construction</span>
+                    <span class="logo-subtext">& Interior</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+    </nav>
+
+    <section class="commitment-hero">
+        <div class="container">
+            <a href="index.html#about" class="back-link">← Back to About</a>
+            <h1>🏛️ Architectural Excellence</h1>
+            <p>Creating masterpieces that blend aesthetics with functionality</p>
+        </div>
+    </section>
+
+    <section class="commitment-content">
+        <div class="container">
+            <div class="commitment-grid">
+                <div class="commitment-text">
+                    <h2>Design That Inspires</h2>
+                    <p>Our architectural approach combines creative vision with technical expertise to deliver spaces
+                        that are both beautiful and functional. At Patil Construction & Interior, we believe that great
+                        architecture is not just about creating buildings — it's about creating experiences, emotions,
+                        and lasting impressions.</p>
+
+                    <p>Every design we create is tailored to reflect your unique style and meet your specific needs. We
+                        don't believe in one-size-fits-all solutions. Whether you dream of a contemporary modern villa,
+                        a classical palatial bungalow, a minimalist urban home, or a traditional courtyard house, our
+                        architects have the skill and creativity to bring your vision to life.</p>
+
+                    <p>We understand that your home is more than just shelter — it's where memories are made, families
+                        grow, and life unfolds. This understanding drives us to create spaces that are not only
+                        architecturally stunning but also practical, comfortable, and deeply personal to you.</p>
+                </div>
+                <div class="commitment-image">
+                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop"
+                        alt="Architectural Excellence">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="commitment-content" style="background: #f9f9f9;">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center;">Our
+                Architectural Services</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #2c3e50;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏠 Residential
+                        Architecture</h4>
+                    <p style="color: #666; line-height: 1.7;">Custom home designs from compact apartments to sprawling
+                        villas. We create living spaces that reflect your personality and accommodate your lifestyle —
+                        whether you need a cozy family home, a multi-generational residence, or a luxury estate.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #2c3e50;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏢 Commercial
+                        Architecture</h4>
+                    <p style="color: #666; line-height: 1.7;">Offices, retail spaces, showrooms, and commercial
+                        complexes designed for functionality and brand impact. We create work environments that boost
+                        productivity and customer experiences that drive business success.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #2c3e50;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">📐 3D Visualization</h4>
+                    <p style="color: #666; line-height: 1.7;">Photorealistic 3D renders and walkthroughs that let you
+                        experience your space before construction begins. See exactly how your home will look — room by
+                        room, angle by angle — and make informed decisions on finishes and layouts.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #2c3e50;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🌿 Sustainable Design
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Eco-friendly architecture that minimizes environmental
+                        impact while maximizing comfort. Natural lighting, cross-ventilation, rainwater harvesting,
+                        solar provisions, and energy-efficient designs that reduce your carbon footprint and utility
+                        bills.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #2c3e50;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏛️ Elevation Design</h4>
+                    <p style="color: #666; line-height: 1.7;">Stunning exterior facades that make a statement. From
+                        contemporary glass and steel looks to traditional stone and brick aesthetics, we create
+                        elevations that enhance curb appeal and reflect your taste.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #2c3e50;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">📋 Approval Drawings</h4>
+                    <p style="color: #666; line-height: 1.7;">Complete documentation for building plan approvals — site
+                        plans, floor plans, sections, elevations, and all required technical drawings. We handle the
+                        approval process with local authorities, ensuring compliance with all regulations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="commitment-content">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;">What Sets Our Architecture Apart
+            </h2>
+
+            <ul class="commitment-features">
+                <li><strong>Context-Sensitive Design</strong> — We study your plot's orientation, surroundings, climate,
+                    and neighborhood before designing. Your home responds to its environment, not fights against it.
+                </li>
+                <li><strong>Space Optimization</strong> — Every square foot is purposeful. No dead corners, no wasted
+                    circulation, no impractical layouts. We maximize usable space without compromising aesthetics.</li>
+                <li><strong>Natural Light & Ventilation</strong> — Properly oriented windows, skylights, and ventilation
+                    strategies ensure your home is bright, airy, and comfortable without excessive dependence on
+                    artificial lighting or AC.</li>
+                <li><strong>Vastu & Feng Shui Integration</strong> — For clients who value these principles, we
+                    thoughtfully incorporate Vastu or Feng Shui requirements into modern, functional designs.</li>
+                <li><strong>Future-Proofing</strong> — We design with expansion possibilities, aging-in-place
+                    considerations, and technology integration in mind. Your home adapts as your life evolves.</li>
+                <li><strong>Structural Efficiency</strong> — Our architectural designs are developed in close
+                    coordination with structural engineers, ensuring that beautiful designs are also economically
+                    buildable.</li>
+                <li><strong>Code Compliance</strong> — All designs meet local building codes, FSI regulations, setback
+                    requirements, and safety standards. No surprises during approvals.</li>
+            </ul>
+
+            <div
+                style="background: linear-gradient(135deg, #e8eef4, #d5dee8); padding: 2rem; border-radius: 12px; margin-top: 2rem; border-left: 4px solid #2c3e50;">
+                <h4 style="color: #2c3e50; margin-bottom: 1rem;">🏛️ Our Design Philosophy</h4>
+                <p style="color: #333; line-height: 1.8; margin: 0;">We believe great architecture balances three
+                    elements: <strong>Form</strong> (how it looks), <strong>Function</strong> (how it works), and
+                    <strong>Feeling</strong> (how it makes you feel). A beautiful home that doesn't function well is
+                    frustrating. A functional home that isn't beautiful is uninspiring. We strive to create homes that
+                    excel in all three dimensions — places that are practical, beautiful, and emotionally satisfying to
+                    live in.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="commitment-cta">
+        <div class="container">
+            <h3>Let's Design Your Dream Space</h3>
+            <p>Work with our expert architects to create something extraordinary — a home that's uniquely yours in every
+                way</p>
+            <a href="index.html#contact" class="btn btn-primary">Start Your Architectural Journey</a>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

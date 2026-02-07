@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uncompromised Quality | Patil Construction & Interior</title>
+    <meta name="description"
+        content="Our commitment to uncompromised quality in every construction and interior project.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .quality-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .quality-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .quality-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .quality-content {
+            padding: 80px 0;
+        }
+
+        .quality-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .quality-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .quality-text p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .quality-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .quality-features li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--text-dark);
+            border-bottom: 1px solid #eee;
+        }
+
+        .quality-features li:last-child {
+            border-bottom: none;
+        }
+
+        .quality-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .quality-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .quality-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .quality-standards {
+            background: #f9f9f9;
+            padding: 80px 0;
+        }
+
+        .standards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .standard-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--accent);
+        }
+
+        .standard-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .standard-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .standard-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .standard-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .standard-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .standard-card-link .standard-card {
+            cursor: pointer;
+        }
+
+        .quality-cta {
+            background: var(--primary);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .quality-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .quality-cta p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .quality-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .quality-hero h1 {
+                font-size: 2rem;
+            }
+
+            .quality-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">Patil</span><span class="logo-accent">Construction</span>
+                    <span class="logo-subtext">& Interior</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="quality-hero">
+        <div class="container">
+            <a href="index.html#about" class="back-link">← Back to About</a>
+            <h1>🏆 Uncompromised Quality</h1>
+            <p>Excellence is not just our goal — it's our standard in every project we undertake</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="quality-content">
+        <div class="container">
+            <div class="quality-grid">
+                <div class="quality-text">
+                    <h2>Our Quality Philosophy</h2>
+                    <p>At Patil Construction & Interior, quality isn't negotiable — it's the foundation of everything we
+                        do. We believe that every structure we build should stand as a testament to excellence — crafted
+                        with precision, built with integrity, and designed to last generations. Quality is not just
+                        about using good materials; it's about having the right mindset, skilled hands, proper
+                        processes, and unwavering commitment to doing things right the first time.</p>
+
+                    <p>Our quality philosophy is built on three core principles: <strong>Prevention over
+                            Correction</strong> — We invest heavily in planning, training, and process design to prevent
+                        defects rather than fix them later. <strong>Continuous Improvement</strong> — Every project
+                        teaches us something new, and we continuously refine our methods to deliver better results.
+                        <strong>Zero Compromise</strong> — When quality conflicts with cost or schedule, quality wins.
+                        We never cut corners, even when clients may not notice.</p>
+
+                    <p>Our rigorous quality control processes ensure that every aspect of your project meets the highest
+                        industry standards. From initial soil testing to final handover, we maintain over 150 quality
+                        checkpoints across different construction stages. Our dedicated quality team works independently
+                        from the construction team, ensuring objective and unbiased assessments.</p>
+
+                    <p>We believe in transparency with our clients. All test reports, inspection records, and quality
+                        documentation are shared openly. You can visit the site anytime, ask questions, and see exactly
+                        how your building is being constructed. This accountability keeps our teams on their toes and
+                        gives you complete peace of mind.</p>
+
+                    <ul class="quality-features">
+                        <li><strong>Premium Materials Only</strong> — We source only the finest quality materials from
+                            trusted, certified suppliers with proper test certificates</li>
+                        <li><strong>Expert Craftsmanship</strong> — Our skilled workforce brings decades of combined
+                            experience with regular training on new techniques</li>
+                        <li><strong>Rigorous Inspections</strong> — Multiple quality checkpoints at every stage with
+                            documented verification before proceeding</li>
+                        <li><strong>Industry Certifications</strong> — Full compliance with IS codes, NBC guidelines,
+                            and local building regulations</li>
+                        <li><strong>Warranty Assurance</strong> — We stand behind our work with comprehensive warranties
+                            covering structure and workmanship</li>
+                        <li><strong>Third-Party Testing</strong> — All critical materials tested at independent,
+                            NABL-accredited laboratories</li>
+                    </ul>
+                </div>
+                <div class="quality-image">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop"
+                        alt="Quality Construction">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Standards Section -->
+    <section class="quality-standards">
+        <div class="container">
+            <h2 class="section-title">Our Quality Standards</h2>
+            <div class="standards-grid">
+                <a href="premium-materials.html" class="standard-card-link">
+                    <div class="standard-card">
+                        <div class="standard-icon">🧱</div>
+                        <h4>Premium Materials</h4>
+                        <p>Only the highest grade cement, steel, bricks, and finishing materials sourced from certified
+                            suppliers.</p>
+                    </div>
+                </a>
+                <a href="precision-engineering.html" class="standard-card-link">
+                    <div class="standard-card">
+                        <div class="standard-icon">📐</div>
+                        <h4>Precision Engineering</h4>
+                        <p>Accurate measurements, proper alignments, and adherence to approved structural designs.</p>
+                    </div>
+                </a>
+                <a href="quality-inspections.html" class="standard-card-link">
+                    <div class="standard-card">
+                        <div class="standard-icon">🔍</div>
+                        <h4>Quality Inspections</h4>
+                        <p>Regular site inspections and quality audits at every stage of construction.</p>
+                    </div>
+                </a>
+                <a href="documentation.html" class="standard-card-link">
+                    <div class="standard-card">
+                        <div class="standard-icon">📋</div>
+                        <h4>Documentation</h4>
+                        <p>Complete documentation of materials used, test reports, and construction methods.</p>
+                    </div>
+                </a>
+                <a href="skilled-workforce.html" class="standard-card-link">
+                    <div class="standard-card">
+                        <div class="standard-icon">👷</div>
+                        <h4>Skilled Workforce</h4>
+                        <p>Trained and experienced professionals handling every aspect of construction.</p>
+                    </div>
+                </a>
+                <a href="final-quality-check.html" class="standard-card-link">
+                    <div class="standard-card">
+                        <div class="standard-icon">✅</div>
+                        <h4>Final Quality Check</h4>
+                        <p>Comprehensive final inspection before handover to ensure everything meets our standards.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="quality-cta">
+        <div class="container">
+            <h3>Experience Quality That Speaks for Itself</h3>
+            <p>Let us build your dream project with the quality it deserves</p>
+            <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

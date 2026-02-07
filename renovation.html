@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovation & Remodeling Services | Patil Construction & Interior</title>
+    <meta name="description"
+        content="Professional renovation and remodeling services - Complete home and office transformation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .service-detail-hero {
+            background: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .service-detail-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-detail-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .service-detail-content {
+            padding: 80px 0;
+        }
+
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .service-detail-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-detail-text p {
+            color: black;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .service-features li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text);
+        }
+
+        .service-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #e67e22;
+            font-weight: bold;
+        }
+
+        .service-detail-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-detail-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .service-cta {
+            background: var(--bg-light);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .service-cta h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-cta p {
+            color: black;
+            margin-bottom: 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .service-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .service-detail-hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-detail-image {
+                order: -1;
+            }
+        }
+
+        /* Project Gallery Styles */
+        .project-gallery {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .gallery-subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            margin-top: -2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-image {
+            overflow: hidden;
+            height: 220px;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-card:hover .gallery-image img {
+            transform: scale(1.1);
+        }
+
+        .gallery-info {
+            padding: 1.5rem;
+        }
+
+        .gallery-info h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .gallery-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">Patil</span><span class="logo-accent">Construction</span>
+                    <span class="logo-subtext">& Interior</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-detail-hero">
+        <div class="container">
+            <a href="index.html#services" class="back-link">← Back to Services</a>
+            <h1>🔧 Renovation & Remodeling</h1>
+            <p>Complete home and office transformation with modern upgrades and quality finishing</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="service-detail-content">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-text">
+                    <h2>Transform Your Space</h2>
+                    <p>Our renovation and remodeling services breathe new life into existing spaces. Whether you're
+                        updating a single room or undertaking a complete home transformation, we deliver exceptional
+                        results that exceed expectations. Renovation is not just about cosmetic updates — it's about
+                        reimagining how you use your space.</p>
+
+                    <p>We combine innovative design with quality craftsmanship to create spaces that are both functional
+                        and beautiful, while respecting your budget and timeline. Our team understands the unique
+                        challenges of working in occupied homes and minimizes disruption to your daily life.</p>
+
+                    <p>From outdated kitchens to cramped layouts, from worn flooring to dated bathrooms — we transform
+                        every corner of your property into something you'll love. Our renovation expertise covers
+                        structural modifications, electrical upgrades, plumbing overhauls, and complete aesthetic
+                        makeovers.</p>
+                </div>
+                <div class="service-detail-image">
+                    <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&h=400&fit=crop"
+                        alt="Renovation Services">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Renovation Types Section -->
+    <section class="service-detail-content" style="background: #f9f9f9;">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center;">Our Renovation
+                Services</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #e67e22;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏠 Complete Home
+                        Renovation</h4>
+                    <p style="color: #666; line-height: 1.7;">Full-scale home makeovers covering every room — structural
+                        changes, new layouts, complete rewiring, replumbing, new flooring, fresh paint, and modern
+                        finishes. Transform an old house into your dream home.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #e67e22;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🍳 Kitchen Remodeling
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Modernize your kitchen with new cabinets, countertops,
+                        backsplashes, flooring, and appliance provisions. From basic updates to complete kitchen
+                        gut-renovations with layout changes.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #e67e22;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🚿 Bathroom Renovation
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Complete bathroom makeovers — new tiles, modern fixtures,
+                        updated plumbing, waterproofing, vanities, and shower enclosures. Convert old bathrooms into
+                        spa-like retreats.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #e67e22;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏗️ Room Additions</h4>
+                    <p style="color: #666; line-height: 1.7;">Expand your living space with new room additions, floor
+                        extensions, or converted spaces. Add bedrooms, bathrooms, home offices, or extend your living
+                        room without moving houses.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #e67e22;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">⚡ Electrical & Plumbing
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Upgrade outdated wiring, add more power points, install
+                        MCB panels, and modernize plumbing. Essential infrastructure updates for safety, convenience,
+                        and future-proofing.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #e67e22;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏢 Commercial Renovation
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Office renovations, retail store makeovers, restaurant
+                        fit-outs, and commercial space modernization. Minimal downtime, quality execution, and spaces
+                        that enhance your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Renovation Process Section -->
+    <section class="service-detail-content">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center;">Our Renovation
+                Process</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div
+                    style="background: linear-gradient(135deg, #fef5e7, #fdebd0); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">1️⃣</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Assessment</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Detailed inspection of existing conditions, identifying
+                        what needs updating and what can be preserved.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #fef9e7, #fcf3cf); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">2️⃣</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Design & Planning</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Creating renovation plans, 3D designs, and detailed scope
+                        of work with cost estimates.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #fbeee6, #f5cba7); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">3️⃣</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Demolition</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Careful removal of old fixtures, flooring, and structures
+                        while protecting areas not being renovated.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #f9ebea, #f5b7b1); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">4️⃣</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Structural Work</h4>
+                    <p style="color: #666; font-size: 0.9rem;">New walls, openings, electrical conduits, plumbing lines,
+                        and any structural modifications needed.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #fef5e7, #f9e79f); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">5️⃣</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Finishing Work</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Tiling, painting, fixture installation, carpentry, and
+                        all aesthetic finishing touches.</p>
+                </div>
+
+                <div
+                    style="background: linear-gradient(135deg, #f8f9f9, #d5dbdb); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">6️⃣</div>
+                    <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Cleanup & Handover</h4>
+                    <p style="color: #666; font-size: 0.9rem;">Deep cleaning, final inspection, touch-ups, and handover
+                        of your transformed space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="service-detail-content" style="background: #f9f9f9;">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;">Why Choose Our Renovation
+                Services</h2>
+
+            <ul class="service-features">
+                <li><strong>Experience with Occupied Homes</strong> — We understand you may need to live in your home
+                    during renovation. We work in phases, clean daily, and minimize disruption.</li>
+                <li><strong>Structural Expertise</strong> — Our team can assess what walls can be removed, where beams
+                    are needed, and how to safely modify your home's structure.</li>
+                <li><strong>Hidden Problem Discovery</strong> — We anticipate and address issues often hidden in old
+                    buildings — outdated wiring, leaky pipes, termite damage, reinforcement rust.</li>
+                <li><strong>Seamless Integration</strong> — New work blends seamlessly with existing structures. No
+                    obvious "patched" areas or mismatched finishes.</li>
+                <li><strong>Flexible Phasing</strong> — Renovate in stages if budget is a constraint. We plan work to
+                    allow incremental improvements over time.</li>
+                <li><strong>Honest Assessment</strong> — We tell you upfront what's worth renovating versus replacing.
+                    No unnecessary work, no wasted money.</li>
+                <li><strong>Complete Cleanup</strong> — We leave your renovated space spotless — not just surface clean,
+                    but deep cleaned and ready to use.</li>
+            </ul>
+
+            <div
+                style="background: linear-gradient(135deg, #fef5e7, #fdebd0); padding: 2rem; border-radius: 12px; margin-top: 2rem; border-left: 4px solid #e67e22;">
+                <h4 style="color: #d35400; margin-bottom: 1rem;">🔧 Our Renovation Promise</h4>
+                <p style="color: #333; line-height: 1.8; margin: 0;">We treat your existing home with respect. We
+                    protect furniture and areas not being renovated, we work clean, and we restore order at the end of
+                    each working day. Your renovation should be an exciting transformation, not a stressful ordeal.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Project Gallery Section -->
+    <section class="project-gallery">
+        <div class="container">
+            <h2 class="section-title">Our Renovation Projects</h2>
+            <p class="gallery-subtitle">Amazing transformations delivered with excellence</p>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400&h=300&fit=crop"
+                            alt="Kitchen Renovation">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Kitchen Renovation</h4>
+                        <p>Modern kitchen makeover with premium finishes</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=400&h=300&fit=crop"
+                            alt="Bathroom Remodel">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Bathroom Remodel</h4>
+                        <p>Elegant bathroom transformations</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop"
+                            alt="Bedroom Makeover">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Bedroom Makeover</h4>
+                        <p>Cozy bedroom renovations</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"
+                            alt="Office Renovation">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Office Renovation</h4>
+                        <p>Professional workspace upgrades</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
+                            alt="Home Extension">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Home Extension</h4>
+                        <p>Seamless room additions</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop"
+                            alt="Floor Renovation">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Floor Renovation</h4>
+                        <p>Premium flooring solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+        <div class="container">
+            <h3>Ready to Renovate Your Space?</h3>
+            <p style="color: #000000 !important;">Let our experts transform your property into something extraordinary
+            </p>
+            <a href="index.html#contact" class="btn btn-primary">Get Renovation Quote</a>
+        </div>
+    </section>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

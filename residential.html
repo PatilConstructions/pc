@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential & Commercial Services | Patil Construction & Interior</title>
+    <meta name="description"
+        content="Specialized construction solutions for both private homes and commercial establishments.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .service-detail-hero {
+            background: linear-gradient(135deg, #1f618d 0%, #3498db 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .service-detail-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-detail-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .service-detail-content {
+            padding: 80px 0;
+        }
+
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .service-detail-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-detail-text p {
+            color: black;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .service-features li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text);
+        }
+
+        .service-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .service-detail-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-detail-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .service-cta {
+            background: var(--bg-light);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .service-cta h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .service-cta p {
+            color: black;
+            margin-bottom: 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .service-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .service-detail-hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-detail-image {
+                order: -1;
+            }
+        }
+
+        /* Project Gallery Styles */
+        .project-gallery {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .gallery-subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            margin-top: -2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-image {
+            overflow: hidden;
+            height: 220px;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-card:hover .gallery-image img {
+            transform: scale(1.1);
+        }
+
+        .gallery-info {
+            padding: 1.5rem;
+        }
+
+        .gallery-info h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .gallery-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">Patil</span><span class="logo-accent">Construction</span>
+                    <span class="logo-subtext">& Interior</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-detail-hero">
+        <div class="container">
+            <a href="index.html#services" class="back-link">← Back to Services</a>
+            <h1>🏠 Residential & Commercial</h1>
+            <p>Specialized solutions for both private homes and commercial establishments</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="service-detail-content">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-text">
+                    <h2>Complete Building Solutions</h2>
+                    <p>From cozy family homes to expansive commercial complexes, we deliver excellence in every project.
+                        Our team understands the unique requirements of both residential and commercial construction —
+                        because what works for a home doesn't always work for a business, and vice versa.</p>
+
+                    <p>We tailor our approach based on your specific needs. Residential projects focus on comfort,
+                        warmth, and personal expression. Commercial projects emphasize functionality, durability, and
+                        professional image. Both require quality construction — but the details differ significantly.
+                    </p>
+
+                    <p>Whether you're building your dream home, an investment property, an office for your business, or
+                        a commercial complex, we bring the right expertise and approach to make your project successful.
+                    </p>
+                </div>
+                <div class="service-detail-image">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop"
+                        alt="Residential & Commercial Services">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Residential Section -->
+    <section class="service-detail-content" style="background: #f9f9f9;">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center;">Residential
+                Construction</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #3498db;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏠 Individual Houses</h4>
+                    <p style="color: #666; line-height: 1.7;">Custom-designed homes that reflect your personality and
+                        lifestyle. From compact 2BHK houses to spacious 4BHK bungalows, we build homes that families
+                        love living in.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #3498db;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏡 Villas & Bungalows
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Luxury residential construction with premium finishes,
+                        landscaping, and amenities. Large plots with garden, parking, and outdoor living spaces.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #3498db;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏢 Apartment Buildings
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Multi-unit residential buildings for investors and
+                        developers. Efficient layouts, shared amenities, and designs that maximize rental potential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commercial Section -->
+    <section class="service-detail-content">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center;">Commercial
+                Construction</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="background: linear-gradient(135deg, #eaf2f8, #d4e6f1); padding: 2rem; border-radius: 12px;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏢 Office Buildings</h4>
+                    <p style="color: #666; line-height: 1.7;">Professional workspaces designed for productivity. Open
+                        floor plans, meeting rooms, server rooms, and modern infrastructure for today's businesses.</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #d4e6f1, #aed6f1); padding: 2rem; border-radius: 12px;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🛍️ Retail & Showrooms
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Eye-catching retail spaces that attract customers. Glass
+                        facades, display areas, storage, and customer-friendly layouts that boost sales.</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #aed6f1, #85c1e9); padding: 2rem; border-radius: 12px;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏭 Industrial &
+                        Warehouses</h4>
+                    <p style="color: #666; line-height: 1.7;">Factory buildings, warehouses, and industrial sheds. High
+                        ceilings, heavy-duty flooring, loading docks, and utility infrastructure.</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #85c1e9, #5dade2); padding: 2rem; border-radius: 12px;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏨 Hospitality</h4>
+                    <p style="color: #666; line-height: 1.7;">Hotels, lodges, restaurants, and guest houses.
+                        Guest-focused design with reception, rooms, dining, and service areas.</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #5dade2, #3498db); padding: 2rem; border-radius: 12px;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🏥 Healthcare</h4>
+                    <p style="color: #666; line-height: 1.7;">Clinics, nursing homes, and small hospitals. Specialized
+                        requirements for hygiene, accessibility, and medical equipment.</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #3498db, #2980b9); padding: 2rem; border-radius: 12px;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">🎓 Educational</h4>
+                    <p style="color: #666; line-height: 1.7;">Schools, coaching centers, and training institutes.
+                        Classrooms, labs, administrative areas, and play spaces designed for learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Differences Section -->
+    <section class="service-detail-content" style="background: #f9f9f9;">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;">Our Approach to Different
+                Projects</h2>
+
+            <ul class="service-features">
+                <li><strong>Residential Focus</strong> — Comfort, aesthetics, family needs, natural light, ventilation,
+                    privacy, and personal expression. Homes should feel warm and welcoming.</li>
+                <li><strong>Commercial Focus</strong> — Functionality, durability, professional image, visitor
+                    experience, and operational efficiency. Commercial spaces should work hard for your business.</li>
+                <li><strong>Budget Optimization</strong> — Different priorities for different projects. We help you
+                    allocate budget where it matters most for your specific use case.</li>
+                <li><strong>Timeline Considerations</strong> — Commercial projects often have business launch deadlines.
+                    Residential projects often require more family consultation time.</li>
+                <li><strong>Compliance Requirements</strong> — Different regulations apply. Commercial buildings have
+                    additional fire safety, accessibility, and occupancy requirements.</li>
+                <li><strong>Future Flexibility</strong> — Residential designs for growing families. Commercial designs
+                    for business expansion. We plan for what comes next.</li>
+            </ul>
+
+            <div
+                style="background: linear-gradient(135deg, #eaf2f8, #d4e6f1); padding: 2rem; border-radius: 12px; margin-top: 2rem; border-left: 4px solid #3498db;">
+                <h4 style="color: #1f618d; margin-bottom: 1rem;">🏠🏢 Our Building Promise</h4>
+                <p style="color: #333; line-height: 1.8; margin: 0;">Whether you're building a home for your family or a
+                    space for your business, we bring the same commitment to quality and the same attention to your
+                    specific needs. Every project gets the right approach, the right expertise, and the right level of
+                    care to deliver a building that serves its purpose perfectly.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Project Gallery Section -->
+    <section class="project-gallery">
+        <div class="container">
+            <h2 class="section-title">Our Building Projects</h2>
+            <p class="gallery-subtitle">Residential and commercial excellence</p>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop"
+                            alt="Luxury Villa">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Luxury Villa</h4>
+                        <p>Premium residential construction</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop"
+                            alt="Office Tower">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Corporate Tower</h4>
+                        <p>Modern commercial complex</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=300&fit=crop"
+                            alt="Apartment">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Apartment Complex</h4>
+                        <p>Multi-family residential buildings</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=300&fit=crop"
+                            alt="Retail Space">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Retail Showroom</h4>
+                        <p>Commercial retail construction</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400&h=300&fit=crop"
+                            alt="Family Home">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Family Residence</h4>
+                        <p>Cozy homes for families</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop"
+                            alt="Office Space">
+                    </div>
+                    <div class="gallery-info">
+                        <h4>Modern Workspace</h4>
+                        <p>Contemporary office environments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="service-cta">
+        <div class="container">
+            <h3>Planning a Residential or Commercial Project?</h3>
+            <p style="color: #000000 !important;">Let's discuss your requirements and create the perfect space</p>
+            <a href="index.html#contact" class="btn btn-primary">Start Your Project</a>
+        </div>
+    </section>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

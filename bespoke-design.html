@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bespoke Design Solutions | Patil Construction & Interior</title>
+    <meta name="description" content="Custom-tailored design solutions unique to your vision and lifestyle.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .commitment-hero {
+            background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .commitment-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .commitment-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .commitment-content {
+            padding: 80px 0;
+        }
+
+        .commitment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .commitment-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .commitment-text p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .commitment-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .commitment-features li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--text-dark);
+            border-bottom: 1px solid #eee;
+        }
+
+        .commitment-features li:last-child {
+            border-bottom: none;
+        }
+
+        .commitment-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #9b59b6;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .commitment-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .commitment-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .commitment-cta {
+            background: var(--primary);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .commitment-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .commitment-cta p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .commitment-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .commitment-hero h1 {
+                font-size: 2rem;
+            }
+
+            .commitment-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">Patil</span><span class="logo-accent">Construction</span>
+                    <span class="logo-subtext">& Interior</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+    </nav>
+
+    <section class="commitment-hero">
+        <div class="container">
+            <a href="index.html#about" class="back-link">← Back to About</a>
+            <h1>✨ Bespoke Design Solutions</h1>
+            <p>Custom-tailored designs that reflect your unique personality and lifestyle</p>
+        </div>
+    </section>
+
+    <section class="commitment-content">
+        <div class="container">
+            <div class="commitment-grid">
+                <div class="commitment-text">
+                    <h2>Uniquely Yours</h2>
+                    <p>No two projects are the same because no two clients are alike. At Patil Construction & Interior,
+                        we reject the cookie-cutter approach that plagues the construction industry. Our bespoke design
+                        philosophy ensures that every space we create is a true reflection of your personality,
+                        preferences, and lifestyle — not a copy of something we've done before.</p>
+
+                    <p>We take time to understand your vision, your needs, and your aspirations before crafting designs
+                        that are exclusively yours — never templates, always originals. Our designers don't just ask
+                        what you want; they explore how you live, what inspires you, what problems you face in your
+                        current space, and what dreams you have for your new one.</p>
+
+                    <p>Whether you prefer minimalist modern aesthetics, warm traditional designs, fusion concepts, or
+                        something entirely unique, we have the skills and creativity to bring your vision to life. Your
+                        home should tell your story, and we're here to help you write it in brick, mortar, and beautiful
+                        finishes.</p>
+                </div>
+                <div class="commitment-image">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=400&fit=crop"
+                        alt="Bespoke Design">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="commitment-content" style="background: #f9f9f9;">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 2rem; text-align: center;">Our Design
+                Process</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #9b59b6;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">1️⃣ Discovery Session
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">We begin with an in-depth consultation to understand your
+                        lifestyle, family needs, aesthetic preferences, and budget. We discuss your daily routines,
+                        entertaining habits, storage needs, and any specific requirements like home offices, gyms, or
+                        puja rooms.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #9b59b6;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">2️⃣ Concept Development
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Based on our discovery, we create initial design concepts
+                        — mood boards, layout options, and style directions. We present multiple approaches so you can
+                        see different possibilities and choose the direction that resonates most with you.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #9b59b6;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">3️⃣ Design Refinement
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Once you select a concept, we refine every detail — room
+                        layouts, elevation designs, color schemes, material selections, and fixture choices. We use 3D
+                        visualizations so you can see exactly how your space will look before construction begins.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #9b59b6;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">4️⃣ Material Selection
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">We accompany you to showrooms and suppliers to select
+                        tiles, flooring, sanitaryware, paint colors, and finishes. Every material is hand-picked to
+                        match your design vision while staying within your budget.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #9b59b6;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">5️⃣ Detailed
+                        Documentation</h4>
+                    <p style="color: #666; line-height: 1.7;">Complete working drawings are prepared — architectural
+                        plans, structural designs, MEP layouts, and finish schedules. Every detail is documented to
+                        ensure your vision is executed precisely during construction.</p>
+                </div>
+
+                <div
+                    style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-top: 4px solid #9b59b6;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem;">6️⃣ Design Supervision
+                    </h4>
+                    <p style="color: #666; line-height: 1.7;">Our designers remain involved throughout construction,
+                        ensuring that the executed work matches the design intent. Regular site visits and coordination
+                        with the construction team guarantee that your vision becomes reality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="commitment-content">
+        <div class="container">
+            <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;">What Makes Our Design Approach
+                Different</h2>
+
+            <ul class="commitment-features">
+                <li><strong>Lifestyle-Centered Design</strong> — We design around how you actually live, not just how a
+                    space should look. Your morning routines, family gatherings, work habits, and hobbies all influence
+                    our design decisions.</li>
+                <li><strong>No Templates or Repetition</strong> — Every project starts with a blank canvas. We don't
+                    recycle designs from previous projects. Your home is designed specifically for you, your plot, your
+                    orientation, and your requirements.</li>
+                <li><strong>Vastu Integration</strong> — For clients who follow Vastu principles, we thoughtfully
+                    integrate these requirements into modern, functional designs without compromising aesthetics or
+                    practicality.</li>
+                <li><strong>Future-Ready Spaces</strong> — We design with your future in mind — provisions for
+                    children's growth, aging parents, technology integration, and potential extensions. Your home grows
+                    with you.</li>
+                <li><strong>Budget-Conscious Creativity</strong> — Great design doesn't require unlimited budgets. We
+                    find creative solutions to achieve stunning results within your budget, prioritizing where it
+                    matters most.</li>
+                <li><strong>Sustainable Options</strong> — We offer eco-friendly design choices — natural lighting
+                    optimization, cross-ventilation, rainwater harvesting integration, and sustainable material options
+                    for environmentally conscious clients.</li>
+                <li><strong>Complete Coordination</strong> — Architecture, interiors, landscape, and MEP are designed
+                    together as one cohesive vision. No disconnects between different design elements.</li>
+            </ul>
+
+            <div
+                style="background: linear-gradient(135deg, #f3e8ff, #e9d5ff); padding: 2rem; border-radius: 12px; margin-top: 2rem; border-left: 4px solid #9b59b6;">
+                <h4 style="color: #7c3aed; margin-bottom: 1rem;">✨ Design Services We Offer</h4>
+                <p style="color: #333; line-height: 1.8; margin: 0;"><strong>Architectural Design:</strong> Custom home
+                    layouts, elevation design, space planning. <strong>Interior Design:</strong> Room layouts, furniture
+                    design, color schemes, lighting design. <strong>Landscape Design:</strong> Gardens, outdoor living
+                    spaces, water features. <strong>Modular Solutions:</strong> Kitchen, wardrobes, TV units, storage
+                    systems designed to your specifications. <strong>3D Visualization:</strong> Photorealistic renders
+                    of your space before construction.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="commitment-cta">
+        <div class="container">
+            <h3>Create Something Extraordinary</h3>
+            <p>Let's design a space that's uniquely yours — reflecting your personality, serving your lifestyle, and
+                inspiring your everyday life</p>
+            <a href="index.html#contact" class="btn btn-primary">Start Your Design Journey</a>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

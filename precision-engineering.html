@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Engineering | Patil Construction & Interior</title>
+    <meta name="description"
+        content="Accurate measurements, proper alignments, and adherence to approved structural designs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .standard-hero {
+            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .standard-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .standard-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .standard-content {
+            padding: 80px 0;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #2980b9;
+            padding-left: 1rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+        }
+
+        .content-section p {
+            color: #333;
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid #2980b9;
+        }
+
+        .highlight-box h4 {
+            color: #1565c0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .standard-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .standard-features li {
+            padding: 1.2rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--text-dark);
+            border-bottom: 1px solid #eee;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .standard-features li:last-child {
+            border-bottom: none;
+        }
+
+        .standard-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2980b9;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 2rem 0;
+        }
+
+        .column-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .column-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .column-card ul {
+            padding-left: 1.5rem;
+        }
+
+        .column-card li {
+            margin-bottom: 0.8rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .process-step::after {
+            content: "→";
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: #2980b9;
+        }
+
+        .process-step:last-child::after {
+            display: none;
+        }
+
+        .process-step .step-number {
+            width: 50px;
+            height: 50px;
+            background: #2980b9;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .process-step h5 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .image-gallery {
+            background: #f9f9f9;
+            padding: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item .caption {
+            padding: 1.2rem;
+            background: white;
+        }
+
+        .gallery-item .caption h5 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .gallery-item .caption p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .standard-cta {
+            background: var(--primary);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .standard-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .standard-cta p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .standard-hero h1 {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .process-step::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper"><span class="logo-text">Patil</span><span
+                        class="logo-accent">Construction</span><span class="logo-subtext">& Interior</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+    </nav>
+
+    <section class="standard-hero">
+        <div class="container">
+            <a href="quality.html" class="back-link">← Back to Quality Standards</a>
+            <h1>📐 Precision Engineering</h1>
+            <p>Accurate measurements, flawless alignments, and strict adherence to approved structural designs ensure
+                your building is safe, durable, and exactly as planned.</p>
+        </div>
+    </section>
+
+    <section class="standard-content">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="content-section">
+                <h2>The Science of Structural Excellence</h2>
+                <p>Precision engineering is the backbone of safe and durable construction. At Patil Construction &
+                    Interior, we employ cutting-edge technology, experienced engineers, and rigorous quality control
+                    processes to ensure that every measurement is accurate, every alignment is perfect, and every
+                    structural element is exactly as designed. There is no room for error when it comes to the safety
+                    and longevity of your building.</p>
+
+                <p>Our engineering team consists of qualified civil engineers and structural designers who bring years
+                    of experience to every project. They use advanced software tools like AutoCAD, Revit, STAAD Pro, and
+                    ETABS for precise structural analysis and design. All designs are verified against Indian Standard
+                    codes (IS 456, IS 1893, IS 875) to ensure compliance with structural safety requirements.</p>
+
+                <p>From the initial survey to the final as-built documentation, every step is meticulously planned and
+                    executed. We use state-of-the-art surveying equipment including total stations, auto levels, and
+                    laser leveling instruments to achieve millimeter-level accuracy. This precision translates into
+                    walls that are perfectly plumb, floors that are perfectly level, and structures that are built
+                    exactly to specification.</p>
+            </div>
+
+            <!-- Engineering Process -->
+            <div class="content-section">
+                <h2>Our Engineering Process</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h5>Site Survey</h5>
+                        <p>Detailed topographical survey using GPS and total station</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h5>Soil Analysis</h5>
+                        <p>Geotechnical investigation and soil bearing capacity tests</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h5>Structural Design</h5>
+                        <p>Computer-aided analysis and design with IS code compliance</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h5>Execution</h5>
+                        <p>Precise implementation with continuous monitoring</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Surveying Section -->
+            <div class="content-section">
+                <h2>Advanced Surveying Techniques</h2>
+                <p>Accurate surveying is the foundation of precision engineering. Before any construction begins, our
+                    survey team conducts a comprehensive site assessment using advanced equipment to establish accurate
+                    benchmarks and reference points. This data forms the basis for all subsequent construction
+                    activities.</p>
+
+                <div class="highlight-box">
+                    <h4>🔧 Our Surveying Equipment</h4>
+                    <p><strong>Total Station:</strong> Electronic theodolite integrated with electronic distance
+                        measurement for highly accurate angle and distance measurements. <strong>Auto Level:</strong>
+                        Optical leveling instrument for establishing accurate horizontal planes and measuring elevation
+                        differences. <strong>Laser Level:</strong> Self-leveling rotary laser for quick and accurate
+                        level transfer across large areas. <strong>GPS Survey:</strong> Differential GPS for
+                        geo-referencing and large-scale topographical surveys.</p>
+                </div>
+
+                <ul class="standard-features">
+                    <li><strong>Benchmark Establishment</strong> — Permanent reference points are established at the
+                        site and verified against known survey benchmarks. All level measurements are referenced to
+                        these benchmarks throughout construction.</li>
+                    <li><strong>Setting Out</strong> — Building lines, column positions, and foundation excavation
+                        limits are precisely marked using survey instruments. Multiple verification checks ensure
+                        accuracy before excavation begins.</li>
+                    <li><strong>Level Transfer</strong> — Floor levels are transferred accurately from floor to floor
+                        using precise leveling instruments. Continuous monitoring ensures consistent floor heights
+                        throughout the building.</li>
+                    <li><strong>Plumb Verification</strong> — Columns and walls are checked for vertical alignment using
+                        plumb bobs, theodolites, and laser plummets. Deviations are corrected immediately during
+                        construction.</li>
+                </ul>
+            </div>
+
+            <!-- Structural Analysis Section -->
+            <div class="content-section">
+                <h2>Structural Analysis & Design</h2>
+                <p>Our structural designs are created using industry-leading software that performs complex calculations
+                    and simulations. Every structural element is designed to safely carry the expected loads with
+                    appropriate safety factors as specified in Indian Standard codes.</p>
+
+                <div class="two-column">
+                    <div class="column-card">
+                        <h4>💻 Design Software</h4>
+                        <ul>
+                            <li><strong>STAAD Pro</strong> — 3D structural analysis and design</li>
+                            <li><strong>ETABS</strong> — Multi-story building analysis</li>
+                            <li><strong>AutoCAD</strong> — Detailed structural drawings</li>
+                            <li><strong>Revit</strong> — BIM modeling and coordination</li>
+                            <li><strong>Excel Calculations</strong> — Manual verification of critical elements</li>
+                        </ul>
+                    </div>
+                    <div class="column-card">
+                        <h4>📋 Design Considerations</h4>
+                        <ul>
+                            <li><strong>Dead Loads</strong> — Weight of structure and permanent fixtures</li>
+                            <li><strong>Live Loads</strong> — Occupancy loads as per IS 875</li>
+                            <li><strong>Seismic Loads</strong> — Earthquake forces as per IS 1893</li>
+                            <li><strong>Wind Loads</strong> — Wind pressure calculations</li>
+                            <li><strong>Load Combinations</strong> — Critical combinations analyzed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>All structural designs undergo peer review by senior engineers before implementation. Design
+                    assumptions, load calculations, and analysis results are documented and archived for future
+                    reference. Any design modifications during construction are made only after proper engineering
+                    evaluation and approval.</p>
+            </div>
+
+            <!-- Execution Precision Section -->
+            <div class="content-section">
+                <h2>Precision During Execution</h2>
+                <p>The best designs mean nothing without precise execution. Our site team is trained to work with high
+                    accuracy and attention to detail. Every construction activity is monitored and verified against the
+                    approved drawings and specifications.</p>
+
+                <ul class="standard-features">
+                    <li><strong>Formwork Precision</strong> — Column and beam formwork is fabricated and erected with
+                        precise dimensions and alignments. Formwork is checked and approved before concrete is poured.
+                    </li>
+                    <li><strong>Reinforcement Accuracy</strong> — Steel reinforcement is cut, bent, and placed exactly
+                        as per the bar bending schedule. Cover blocks ensure proper concrete cover. Lap lengths and
+                        anchorage lengths are verified.</li>
+                    <li><strong>Concrete Placement</strong> — Concrete is placed carefully to avoid segregation and
+                        honey-combing. Proper vibration ensures complete compaction. Surface finishing is done to
+                        achieve specified tolerances.</li>
+                    <li><strong>Masonry Precision</strong> — Brick and block work is laid true to line and level. Mortar
+                        joints are uniform. Door and window openings are positioned accurately as per drawings.</li>
+                    <li><strong>MEP Coordination</strong> — Plumbing and electrical sleeves are positioned accurately.
+                        Conduit runs are coordinated with structural elements. Fixture positions are marked precisely.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Quality Verification Section -->
+            <div class="content-section">
+                <h2>Continuous Quality Verification</h2>
+                <p>Throughout construction, our quality team conducts regular checks and measurements to ensure that the
+                    work meets the required standards. Any deviations are identified and corrected immediately, before
+                    they can affect subsequent work.</p>
+
+                <div class="highlight-box">
+                    <h4>📊 Tolerance Standards We Follow</h4>
+                    <p><strong>Column Verticality:</strong> ±3mm per 3m height (IS 456). <strong>Floor Level:</strong>
+                        ±10mm over any 3m span. <strong>Wall Alignment:</strong> ±6mm per 3m height. <strong>Beam
+                            Alignment:</strong> ±5mm from design line. <strong>Foundation Position:</strong> ±25mm from
+                        design location. All measurements are recorded and compared against these tolerance limits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-gallery">
+        <div class="container">
+            <h2 class="section-title">Precision in Action</h2>
+            <div class="gallery-grid">
+                <a href="engineering/site-surveying.html" class="gallery-item"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=220&fit=crop"
+                        alt="Site Survey">
+                    <div class="caption">
+                        <h5>Site Surveying</h5>
+                        <p>GPS and total station surveys for accurate benchmarks</p>
+                    </div>
+                </a>
+                <a href="engineering/structural-design.html" class="gallery-item"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=220&fit=crop"
+                        alt="Structural Design">
+                    <div class="caption">
+                        <h5>Structural Design</h5>
+                        <p>Computer-aided analysis and detailed drawings</p>
+                    </div>
+                </a>
+                <a href="engineering/foundation.html" class="gallery-item"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1541976590-713941681591?w=400&h=220&fit=crop"
+                        alt="Foundation Work">
+                    <div class="caption">
+                        <h5>Foundation Precision</h5>
+                        <p>Accurate excavation and reinforcement placement</p>
+                    </div>
+                </a>
+                <a href="engineering/column-framework.html" class="gallery-item"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=220&fit=crop"
+                        alt="Column Framework">
+                    <div class="caption">
+                        <h5>Column Framework</h5>
+                        <p>Precise formwork with verified alignments</p>
+                    </div>
+                </a>
+                <a href="engineering/level-verification.html" class="gallery-item"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=220&fit=crop"
+                        alt="Level Check">
+                    <div class="caption">
+                        <h5>Level Verification</h5>
+                        <p>Continuous level checks during construction</p>
+                    </div>
+                </a>
+                <a href="engineering/finished-excellence.html" class="gallery-item"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=220&fit=crop"
+                        alt="Finished Building">
+                    <div class="caption">
+                        <h5>Finished Excellence</h5>
+                        <p>Precision engineering delivering perfect results</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="standard-cta">
+        <div class="container">
+            <h3>Precision Built Into Every Project</h3>
+            <p>Experience the difference that precision engineering makes. Every measurement matters, every alignment
+                counts, and every detail contributes to a structure that stands strong for generations.</p>
+            <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

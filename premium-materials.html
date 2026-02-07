@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Materials | Patil Construction & Interior</title>
+    <meta name="description"
+        content="We use only the highest grade construction materials sourced from certified suppliers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .standard-hero {
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .standard-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .standard-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .standard-content {
+            padding: 80px 0;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+        }
+
+        .content-section p {
+            color: #333;
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff8e1, #fff3e0);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid #e67e22;
+        }
+
+        .highlight-box h4 {
+            color: #d35400;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .standard-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .standard-features li {
+            padding: 1.2rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--text-dark);
+            border-bottom: 1px solid #eee;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .standard-features li:last-child {
+            border-bottom: none;
+        }
+
+        .standard-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #e67e22;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 2rem 0;
+        }
+
+        .column-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .column-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .column-card ul {
+            padding-left: 1.5rem;
+        }
+
+        .column-card li {
+            margin-bottom: 0.8rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .image-gallery {
+            background: #f9f9f9;
+            padding: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item .caption {
+            padding: 1.2rem;
+            background: white;
+        }
+
+        .gallery-item .caption h5 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .gallery-item .caption p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .gallery-link {
+            text-decoration: none;
+            display: block;
+        }
+
+        .gallery-link .gallery-item {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-link:hover .gallery-item {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-link .caption h5::after {
+            content: " →";
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-link:hover .caption h5::after {
+            opacity: 1;
+        }
+
+        .standard-cta {
+            background: var(--primary);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .standard-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .standard-cta p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .stat-box .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #e67e22;
+        }
+
+        .stat-box .label {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .standard-hero h1 {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper">
+                    <span class="logo-text">Patil</span><span class="logo-accent">Construction</span>
+                    <span class="logo-subtext">& Interior</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+    </nav>
+
+    <section class="standard-hero">
+        <div class="container">
+            <a href="quality.html" class="back-link">← Back to Quality Standards</a>
+            <h1>🧱 Premium Materials</h1>
+            <p>The foundation of every great structure lies in the quality of materials used. We source only the finest
+                grade construction materials from certified and trusted suppliers across India.</p>
+        </div>
+    </section>
+
+    <section class="standard-content">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="content-section">
+                <h2>Our Material Philosophy</h2>
+                <p>At Patil Construction & Interior, we firmly believe that <strong>quality construction begins with
+                        quality materials</strong>. Every brick, every bag of cement, every steel reinforcement bar that
+                    goes into your project is carefully selected, tested, and verified to meet the highest industry
+                    standards. We never compromise on material quality, because we understand that your building is not
+                    just a structure — it's your home, your investment, your legacy.</p>
+
+                <p>Over the past 5+ years, we have built strong relationships with India's most reputable material
+                    suppliers and manufacturers. These partnerships allow us to source premium-grade materials at
+                    competitive prices, ensuring that our clients receive the best value without ever sacrificing
+                    quality. Every material we use comes with proper certifications, test reports, and manufacturer
+                    warranties.</p>
+
+                <p>Our dedicated procurement team visits supplier facilities, inspects material samples, and verifies
+                    certifications before any materials are approved for use in our projects. This rigorous selection
+                    process ensures that only the finest materials make it to your construction site. We maintain
+                    detailed records of all materials used, including batch numbers, test certificates, and supplier
+                    information — providing complete traceability and peace of mind.</p>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-row">
+                <div class="stat-box">
+                    <div class="number">100%</div>
+                    <div class="label">ISI Certified Materials</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">15+</div>
+                    <div class="label">Trusted Suppliers</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">30+</div>
+                    <div class="label">Projects Delivered</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">0%</div>
+                    <div class="label">Material Defects</div>
+                </div>
+            </div>
+
+            <!-- Cement Section -->
+            <div class="content-section">
+                <h2>Premium Cement</h2>
+                <p>Cement is the binding agent that holds your entire structure together, which is why we use only Grade
+                    53 OPC (Ordinary Portland Cement) and PPC (Portland Pozzolana Cement) from India's most trusted
+                    manufacturers. These premium-grade cements provide superior compressive strength, excellent
+                    workability, and long-term durability.</p>
+
+                <div class="highlight-box">
+                    <h4>🏭 Our Cement Suppliers</h4>
+                    <p><strong>UltraTech Cement</strong> — India's largest cement manufacturer, known for consistent
+                        quality and superior strength. <strong>ACC Cement</strong> — A heritage brand with over 80 years
+                        of excellence in cement manufacturing. <strong>Ambuja Cement</strong> — Renowned for its
+                        durability and resistance to environmental factors. <strong>Dalmia Cement</strong> — Known for
+                        eco-friendly manufacturing and high-performance products.</p>
+                </div>
+
+                <p>We conduct regular slump tests and cube tests on concrete mixed with our cement to verify that it
+                    meets the specified grade requirements. All cement bags are stored in dry, covered areas to prevent
+                    moisture absorption and maintain their binding properties. We maintain strict inventory rotation to
+                    ensure fresh cement is always used in construction.</p>
+            </div>
+
+            <!-- Steel Section -->
+            <div class="content-section">
+                <h2>High-Grade Reinforcement Steel</h2>
+                <p>The structural integrity of your building depends heavily on the quality of steel reinforcement used.
+                    We exclusively use TMT (Thermo-Mechanically Treated) bars from reputed manufacturers that meet IS
+                    1786 specifications. Our steel provides the perfect combination of high tensile strength, ductility,
+                    and corrosion resistance.</p>
+
+                <div class="two-column">
+                    <div class="column-card">
+                        <h4>🔧 Steel Brands We Use</h4>
+                        <ul>
+                            <li><strong>TATA Tiscon</strong> — Premium Fe-500D grade with excellent bendability</li>
+                            <li><strong>JSW NeoSteel</strong> — Superior corrosion resistance and earthquake resistance
+                            </li>
+                            <li><strong>SAIL TMT</strong> — Government-owned plant with strict quality control</li>
+                            <li><strong>Vizag Steel</strong> — High purity steel with consistent properties</li>
+                        </ul>
+                    </div>
+                    <div class="column-card">
+                        <h4>📋 Quality Checks</h4>
+                        <ul>
+                            <li>Mill test certificates verified for every batch</li>
+                            <li>Visual inspection for surface defects and rust</li>
+                            <li>Diameter and weight verification against standards</li>
+                            <li>Bend test and rebend test for ductility</li>
+                            <li>Proper storage to prevent moisture damage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>Every steel bar that enters our construction site is accompanied by a mill test certificate that
+                    verifies its chemical composition and mechanical properties. We never use mystery steel or
+                    uncertified bars, no matter how attractive the price may be. Your safety is priceless, and we treat
+                    it as such.</p>
+            </div>
+
+            <!-- Bricks & Blocks Section -->
+            <div class="content-section">
+                <h2>Quality Bricks & Blocks</h2>
+                <p>The walls of your home deserve the best building blocks available. We use a combination of
+                    first-class burnt clay bricks and AAC (Autoclaved Aerated Concrete) blocks depending on the specific
+                    requirements of each project. Both options provide excellent thermal insulation, sound dampening,
+                    and long-term durability.</p>
+
+                <ul class="standard-features">
+                    <li><strong>First-Class Burnt Clay Bricks</strong> — Well-burnt, uniform in color, sharp edges, and
+                        clear ringing sound when struck. Compressive strength of 10-15 N/mm². Low water absorption.
+                        These traditional bricks have been used for centuries and provide proven durability.</li>
+                    <li><strong>AAC Blocks</strong> — Lightweight blocks with excellent thermal insulation properties.
+                        3-4 times larger than regular bricks, reducing construction time. Consistent dimensions ensure
+                        uniform walls with minimal plaster requirement.</li>
+                    <li><strong>Fly Ash Bricks</strong> — Eco-friendly alternative made from industrial waste. High
+                        compressive strength and dimensional accuracy. Lower water absorption than clay bricks.</li>
+                    <li><strong>Concrete Blocks</strong> — Used for compound walls and specific structural applications.
+                        High strength and durability. Available in solid and hollow variants.</li>
+                </ul>
+            </div>
+
+            <!-- Aggregates Section -->
+            <div class="content-section">
+                <h2>Fine Aggregates & Sand</h2>
+                <p>The quality of sand and aggregates directly impacts the strength and durability of concrete and
+                    mortar. We use only clean, well-graded aggregates that are free from clay, silt, organic matter, and
+                    other impurities. Our sand is either washed river sand or high-quality manufactured sand (M-Sand)
+                    that meets IS 383 specifications.</p>
+
+                <div class="highlight-box">
+                    <h4>🏔️ Our Aggregate Standards</h4>
+                    <p><strong>Coarse Aggregates:</strong> Clean crushed stone aggregates of 20mm and 40mm nominal size
+                        from approved quarries. Properly graded with minimal flaky and elongated particles. <strong>Fine
+                            Aggregates:</strong> Zone II graded sand with fineness modulus between 2.6 and 2.9. Low silt
+                        content (less than 3%). Washed and screened for consistent quality.</p>
+                </div>
+
+                <p>We conduct sieve analysis, silt content tests, and bulking tests on every batch of sand received at
+                    site. Aggregates are properly stacked and protected from contamination. Different sizes are stored
+                    separately to maintain proper grading during use.</p>
+            </div>
+
+            <!-- Finishing Materials Section -->
+            <div class="content-section">
+                <h2>Premium Finishing Materials</h2>
+                <p>The finishing of your home is what you see and touch every day. We use only premium-grade paints,
+                    tiles, fixtures, and hardware from established brands that offer durability, aesthetics, and value
+                    for money.</p>
+
+                <div class="two-column">
+                    <div class="column-card">
+                        <h4>🎨 Paint Brands</h4>
+                        <ul>
+                            <li><strong>Asian Paints</strong> — India's #1 paint brand with extensive color range</li>
+                            <li><strong>Berger Paints</strong> — Known for exterior durability</li>
+                            <li><strong>Nerolac Paints</strong> — Excellent coverage and finish</li>
+                            <li><strong>Dulux</strong> — Premium finish with advanced technology</li>
+                        </ul>
+                    </div>
+                    <div class="column-card">
+                        <h4>🚿 Plumbing & Electrical</h4>
+                        <ul>
+                            <li><strong>Ashirvad/Supreme CPVC</strong> — Hot & cold water pipes</li>
+                            <li><strong>Finolex/Havells Wires</strong> — ISI marked electrical cables</li>
+                            <li><strong>Jaquar/Hindware</strong> — Premium bathroom fixtures</li>
+                            <li><strong>Anchor/Legrand</strong> — Quality switches and sockets</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waterproofing Section -->
+            <div class="content-section">
+                <h2>Waterproofing Solutions</h2>
+                <p>Water damage is one of the most common and costly problems in buildings. We use industry-leading
+                    waterproofing products and techniques to protect your structure from moisture ingress, dampness, and
+                    water seepage. Our comprehensive waterproofing approach covers foundations, basements, bathrooms,
+                    terraces, and external walls.</p>
+
+                <ul class="standard-features">
+                    <li><strong>Dr. Fixit Products</strong> — Complete range of waterproofing solutions including
+                        Pidifin 2K, Dampguard, and Roofseal. These products are specially formulated for Indian
+                        conditions and provide long-lasting protection.</li>
+                    <li><strong>Fosroc Waterproofing</strong> — Premium waterproofing chemicals for critical
+                        applications. Used for water tanks, swimming pools, and high-exposure areas.</li>
+                    <li><strong>CICO Technologies</strong> — Crystalline waterproofing for concrete structures.
+                        Self-healing technology that seals cracks automatically.</li>
+                    <li><strong>STP Limited</strong> — APP modified bitumen membranes for terrace waterproofing. 10-20
+                        year life expectancy with proper application.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-gallery">
+        <div class="container">
+            <h2 class="section-title">Materials We Use</h2>
+            <div class="gallery-grid">
+                <a href="materials/cement.html" class="gallery-link">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=220&fit=crop"
+                            alt="Premium Cement">
+                        <div class="caption">
+                            <h5>Premium Cement</h5>
+                            <p>Grade 53 OPC & PPC from UltraTech, ACC, and Ambuja</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="materials/steel.html" class="gallery-link">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400&h=220&fit=crop"
+                            alt="TMT Steel Bars">
+                        <div class="caption">
+                            <h5>TMT Steel Bars</h5>
+                            <p>Fe-500D grade from TATA, JSW, and SAIL</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="materials/bricks.html" class="gallery-link">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=400&h=220&fit=crop"
+                            alt="Quality Bricks">
+                        <div class="caption">
+                            <h5>Quality Bricks & Blocks</h5>
+                            <p>First-class burnt clay bricks and AAC blocks</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="materials/sand.html" class="gallery-link">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=400&h=220&fit=crop"
+                            alt="Fine Sand">
+                        <div class="caption">
+                            <h5>Fine Aggregates</h5>
+                            <p>Washed river sand and graded crushed stone</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="materials/paints.html" class="gallery-link">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400&h=220&fit=crop"
+                            alt="Premium Paints">
+                        <div class="caption">
+                            <h5>Premium Paints</h5>
+                            <p>Asian Paints, Berger, Nerolac, and Dulux</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="materials/waterproofing.html" class="gallery-link">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=220&fit=crop"
+                            alt="Waterproofing Materials">
+                        <div class="caption">
+                            <h5>Waterproofing</h5>
+                            <p>Dr. Fixit, Fosroc, and CICO products</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="standard-cta">
+        <div class="container">
+            <h3>Build With the Best Materials</h3>
+            <p>Experience the difference that premium materials make in your construction project. Every structure we
+                build is designed to last generations because we never compromise on quality.</p>
+            <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

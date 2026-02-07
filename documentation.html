@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Patil Construction & Interior</title>
+    <meta name="description"
+        content="Complete documentation of materials used, test reports, and construction methods.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .standard-hero {
+            background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .standard-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .standard-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .standard-content {
+            padding: 80px 0;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #16a085;
+            padding-left: 1rem;
+        }
+
+        .content-section p {
+            color: #333;
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #e0f2f1, #b2dfdb);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid #16a085;
+        }
+
+        .highlight-box h4 {
+            color: #00796b;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .standard-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .standard-features li {
+            padding: 1.2rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--text-dark);
+            border-bottom: 1px solid #eee;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .standard-features li:last-child {
+            border-bottom: none;
+        }
+
+        .standard-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #16a085;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .doc-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .doc-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .doc-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .doc-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .doc-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 2rem 0;
+        }
+
+        .column-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .column-card h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .column-card ul {
+            padding-left: 1.5rem;
+        }
+
+        .column-card li {
+            margin-bottom: 0.8rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .standard-cta {
+            background: var(--primary);
+            padding: 60px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .standard-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .standard-cta p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .standard-hero h1 {
+                font-size: 2rem;
+            }
+
+            .doc-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo_new.png" alt="Patil Construction Logo" class="logo-img">
+                <div class="logo-text-wrapper"><span class="logo-text">Patil</span><span
+                        class="logo-accent">Construction</span><span class="logo-subtext">& Interior</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+    </nav>
+
+    <section class="standard-hero">
+        <div class="container">
+            <a href="quality.html" class="back-link">← Back to Quality Standards</a>
+            <h1>📋 Complete Documentation</h1>
+            <p>Every aspect of your construction project is thoroughly documented, providing complete transparency and a
+                valuable record for future reference.</p>
+        </div>
+    </section>
+
+    <section class="standard-content">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="content-section">
+                <h2>Transparency Through Documentation</h2>
+                <p>At Patil Construction & Interior, we believe in complete transparency with our clients. Every aspect
+                    of your construction project is thoroughly documented — from the materials used to the methods
+                    employed, from the test results to the final inspection reports. This comprehensive documentation
+                    serves as a permanent record of your building's construction.</p>
+
+                <p>Good documentation is not just about compliance — it's about trust, accountability, and providing
+                    lasting value. Your project documentation becomes an invaluable reference for future maintenance,
+                    renovations, insurance claims, and even resale. It proves that your building was constructed with
+                    quality materials and proper techniques.</p>
+
+                <p>Our documentation team works alongside the construction team, capturing information in real-time
+                    rather than trying to reconstruct records after the fact. This ensures accuracy and completeness.
+                    All documents are organized, indexed, and provided to you in both physical and digital formats at
+                    project completion.</p>
+            </div>
+
+            <!-- Document Types -->
+            <div class="content-section">
+                <h2>What We Document</h2>
+                <div class="doc-cards">
+                    <a href="documentation/approvals-permits.html" class="doc-card"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="icon">📜</div>
+                        <h4>Approvals & Permits</h4>
+                        <p>Building plan approval, NOCs, construction permits, and all statutory clearances</p>
+                    </a>
+                    <a href="documentation/drawings-designs.html" class="doc-card"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="icon">📐</div>
+                        <h4>Drawings & Designs</h4>
+                        <p>Architectural, structural, MEP drawings, and as-built documentation</p>
+                    </a>
+                    <a href="documentation/test-reports.html" class="doc-card"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="icon">🧪</div>
+                        <h4>Test Reports</h4>
+                        <p>Material test certificates, concrete cube tests, soil reports</p>
+                    </a>
+                    <a href="documentation/photo-records.html" class="doc-card"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="icon">📸</div>
+                        <h4>Photo Records</h4>
+                        <p>Progressive construction photos, concealed works, and milestones</p>
+                    </a>
+                    <a href="documentation/inspection-reports.html" class="doc-card"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="icon">✅</div>
+                        <h4>Inspection Reports</h4>
+                        <p>Stage-wise quality inspection checklists and verification records</p>
+                    </a>
+                    <a href="documentation/warranties.html" class="doc-card"
+                        style="text-decoration: none; color: inherit;">
+                        <div class="icon">📄</div>
+                        <h4>Warranties</h4>
+                        <p>Product warranties, service guarantees, and company commitment</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Detailed Documentation -->
+            <div class="content-section">
+                <h2>Detailed Documentation Package</h2>
+
+                <h3 style="font-size: 1.4rem; color: #16a085; margin: 2rem 0 1rem;">1. Material Documentation</h3>
+                <p>Every major material that goes into your building is documented with proper certifications and
+                    traceability:</p>
+                <ul class="standard-features">
+                    <li><strong>Cement Test Certificates</strong> — Manufacturer's test certificates for every batch of
+                        cement used, showing chemical composition and compressive strength compliance with IS 12269/IS
+                        1489.</li>
+                    <li><strong>Steel Mill Certificates</strong> — Mill test certificates for all reinforcement steel
+                        showing grade (Fe 415/Fe 500), chemical analysis, tensile strength, bend test, and batch
+                        identification for traceability.</li>
+                    <li><strong>Aggregate Test Reports</strong> — Sieve analysis, specific gravity, water absorption,
+                        and impact value tests for coarse and fine aggregates used in concrete.</li>
+                    <li><strong>Brick/Block Test Reports</strong> — Compressive strength, water absorption, and
+                        dimensional accuracy test reports for masonry units.</li>
+                    <li><strong>Invoice & Delivery Records</strong> — Purchase invoices, delivery challans, and receipt
+                        records for all major materials with date-stamped entries.</li>
+                </ul>
+
+                <h3 style="font-size: 1.4rem; color: #16a085; margin: 2rem 0 1rem;">2. Construction Test Reports</h3>
+                <p>Tests conducted during construction to verify quality of workmanship:</p>
+                <ul class="standard-features">
+                    <li><strong>Concrete Cube Test Results</strong> — 7-day and 28-day compressive strength results for
+                        all concrete pours, with cube identification linked to specific structural elements.</li>
+                    <li><strong>Soil Investigation Report</strong> — Bore log data, standard penetration test (SPT)
+                        values, and soil bearing capacity at foundation level used for foundation design.</li>
+                    <li><strong>Water Tank Leakage Test</strong> — 24-72 hour water retention test reports for overhead
+                        and underground water tanks showing no water level drop.</li>
+                    <li><strong>Plumbing Pressure Test</strong> — Hydrostatic pressure test results for all water supply
+                        lines, conducted before concealment.</li>
+                    <li><strong>Electrical Test Reports</strong> — Insulation resistance, earth continuity, and earth
+                        electrode resistance test results.</li>
+                </ul>
+
+                <h3 style="font-size: 1.4rem; color: #16a085; margin: 2rem 0 1rem;">3. Drawings Documentation</h3>
+                <p>Complete set of technical drawings for future reference:</p>
+
+                <div class="two-column">
+                    <div class="column-card">
+                        <h4>📐 Design Drawings</h4>
+                        <ul>
+                            <li>Approved architectural drawings (floor plans, sections, elevations)</li>
+                            <li>Structural design drawings (foundation, columns, beams, slabs)</li>
+                            <li>Reinforcement detail drawings (bar bending schedules)</li>
+                            <li>Electrical layout drawings (wiring, switch positions, DB details)</li>
+                            <li>Plumbing drawings (water supply, drainage, vent systems)</li>
+                        </ul>
+                    </div>
+                    <div class="column-card">
+                        <h4>📋 As-Built Drawings</h4>
+                        <ul>
+                            <li>Actual construction drawings reflecting any site modifications</li>
+                            <li>Concealed service layouts with exact dimensions</li>
+                            <li>Foundation plan with actual depths and pile positions</li>
+                            <li>Hidden MEP routing for future maintenance access</li>
+                            <li>Site plan with actual boundary measurements</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo Documentation -->
+            <div class="content-section">
+                <h2>Photographic Documentation</h2>
+                <p>A picture is worth a thousand words, especially for construction records. We maintain a comprehensive
+                    photographic record of your entire construction journey. These dated photographs serve as proof of
+                    construction quality and are invaluable for any future reference needs.</p>
+
+                <div class="highlight-box">
+                    <h4>📸 What We Photograph</h4>
+                    <p><strong>Foundation Stage:</strong> Excavation, reinforcement layout, concrete pouring.
+                        <strong>Structure Stage:</strong> Column rebar, beam rebar, slab reinforcement before concrete.
+                        <strong>Concealed Works:</strong> All electrical conduits, plumbing lines, and other services
+                        before covering. <strong>Waterproofing:</strong> Application process and final coat for terraces
+                        and wet areas. <strong>Milestones:</strong> Key construction stages like roof casting,
+                        plastering completion. <strong>Final Completion:</strong> All rooms, external areas, and
+                        finished elements.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Warranty Documentation -->
+            <div class="content-section">
+                <h2>Warranties & Guarantees</h2>
+                <p>We provide proper warranty documentation for all components of your project, giving you peace of mind
+                    and protection for your investment:</p>
+
+                <ul class="standard-features">
+                    <li><strong>Structural Warranty</strong> — Patil Construction provides a 10-year warranty covering
+                        major structural defects in foundation, columns, beams, and slabs arising from construction
+                        defects.</li>
+                    <li><strong>Waterproofing Warranty</strong> — 5-year warranty on terrace and bathroom waterproofing
+                        against leakage when maintained as per guidelines.</li>
+                    <li><strong>Paint Warranty</strong> — Manufacturer warranty cards for premium paints (typically 5-7
+                        years for exterior, 3-5 years for interior).</li>
+                    <li><strong>Fixture Warranties</strong> — Individual warranty cards for all branded fixtures
+                        including sanitaryware, electrical fittings, doors, windows, and hardware.</li>
+                    <li><strong>Workmanship Warranty</strong> — 1-year warranty on general finishing workmanship
+                        covering plaster cracks, tile hollow spots, door/window adjustments.</li>
+                </ul>
+            </div>
+
+            <!-- Handover Package -->
+            <div class="content-section">
+                <h2>Your Handover Package</h2>
+                <p>At project completion, you receive a comprehensive documentation package that includes everything you
+                    need for future reference, maintenance, and compliance. The package is organized in a professional
+                    folder and also provided as digital copies on USB/cloud storage.</p>
+
+                <div class="highlight-box">
+                    <h4>📁 Your Documentation Package Contains</h4>
+                    <p><strong>Legal Documents:</strong> Approved building plan, completion certificate, occupancy
+                        certificate. <strong>Technical Documents:</strong> All structural, architectural, and MEP
+                        drawings. <strong>Quality Records:</strong> Material certificates, test reports, inspection
+                        checklists. <strong>Photo Archive:</strong> Complete construction photo album. <strong>Warranty
+                            Cards:</strong> All product warranties organized by category. <strong>Maintenance
+                            Guide:</strong> Recommended maintenance schedule and tips. <strong>Contact
+                            Directory:</strong> Key contacts for any future queries or service needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="standard-cta">
+        <div class="container">
+            <h3>Complete Records for Your Peace of Mind</h3>
+            <p>Every project is delivered with comprehensive documentation that proves quality, ensures compliance, and
+                provides lasting value.</p>
+            <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
